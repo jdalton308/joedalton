@@ -5,29 +5,41 @@
 //// FONTS ////
 @headerFonts:	"brandon-grotesque", Helvetica, Arial, sans-serif; 
 @bodyFonts: 	"ff-tisa-web-pro", Palatino, Georgia, serif; 
-@featureFonts:  "adobe-text-pro", sans-serif;
+@baseFontSize: 	16px;
 
 
 //// COLORS ////
 @black:		    #000;
-@grey:		    lighten(@black, 20%);
-@lightGrey:	  	lighten(@grey, 70%);
-@lighterGrey:   lighten(@grey, 100%);
+@grey:		    #333;
+@lightGrey:	  	#999;
+@lighterGrey:   #ccc;
 @offWhite: 		#FAFAFA;
 @white: 		#FFF;
 
-@darkGreen: 	#351;
 
 // New Color Palate
 @green:			  	darken(#468966, 5%);
+@darkGreen: 		#351;
 @tan:				#FFF0A5;
 @orange: 			#FFB038;
 @lightRed: 			#B64926;
 @red: 				#8E2800;
 
+@hero-copy-back: 	rgba(0,0,0, 0.3);
+
 // Assignments
 @shadowColor: 	#444;
-@textColor:		#222;
+@textColor:		@grey;
 @topText:		@grey;
 @topBack:		@white;
 @bodyHeads:		@lightRed;
+
+
+
+// Mixins
+//---------------------------
+
+.transition (@time: 0.3s) {
+	-webkit-transition: all @time;
+	transition: all @time;
+}
