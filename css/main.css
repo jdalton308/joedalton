@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: "ff-tisa-web-pro", Palatino, Georgia, serif;
+  font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
 }
 h1,
 .h1,
@@ -15,9 +15,13 @@ h2,
 .h2,
 h3,
 .h3 {
-  font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
+  font-family: "ff-tisa-web-pro", Palatino, Georgia, serif;
   font-weight: 400;
   margin-top: 0;
+}
+h2 {
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 p {
   margin: 0 0 10px;
@@ -52,13 +56,12 @@ section {
   float: left;
   width: 50%;
   margin-bottom: 20px;
-  padding: 0 20px;
+  padding: 0 10px;
   text-align: center;
 }
 .icon-list li .icon {
   display: inline-block;
   width: 50px;
-  margin-bottom: 10px;
 }
 .icon-list li h3 {
   margin-bottom: 5px;
@@ -67,9 +70,15 @@ button {
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
-  padding: 8px 15px 5px;
-  background-color: #ccc;
-  border: none;
+  padding: 8px 15px 7px;
+  font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1em;
+  letter-spacing: 1px;
+  background-color: #333;
+  color: #FFF;
+  border: 3px solid #FFF;
+  border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -81,7 +90,7 @@ button:hover {
   z-index: 10;
   max-height: 60px;
   width: 100%;
-  padding: 10px 0;
+  padding: 0;
   overflow: hidden;
   text-align: left;
   background-color: #FFF;
@@ -320,10 +329,10 @@ button:hover {
   width: 100%;
   max-width: 300px;
   margin: 0;
-  padding: 7px 12px 4px;
+  padding: 10px 15px 7px;
   font-size: 1rem;
   border: 2px solid transparent;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .section-contact form input[type="text"]:focus,
 .section-contact form input[type="email"]:focus,
