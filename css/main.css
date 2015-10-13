@@ -55,6 +55,7 @@ section {
 .icon-list li {
   float: left;
   width: 50%;
+  min-height: 145px;
   margin-bottom: 20px;
   padding: 0 10px;
   text-align: center;
@@ -64,7 +65,7 @@ section {
   width: 50px;
 }
 .icon-list li h3 {
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 button {
   width: 100%;
@@ -239,15 +240,19 @@ button:hover {
   color: #333;
 }
 .section-hero {
-  min-height: 90vh;
+  min-height: 100vh;
   padding: 40vh 30px 0;
   background-size: auto 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: inset 0 0 15px #ccc;
 }
 .section-hero.first {
-  background-image: url();
+  background-image: url(/img/LakeMich5.jpg);
+}
+.section-hero.second {
+  background-image: url(/img/MickeysBeach2.jpg);
 }
 .section-hero .hero-text {
   display: inline-block;
@@ -255,8 +260,9 @@ button:hover {
 }
 .section-hero .hero-text h1 {
   display: inline-block;
-  padding: 0 5px;
+  padding: 0 8px;
   margin: 0;
+  font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
   background-color: rgba(0, 0, 0, 0.3);
 }
 @media (min-width: 768px) {
