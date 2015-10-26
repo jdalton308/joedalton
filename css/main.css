@@ -391,3 +391,22 @@ button:hover {
   outline: none;
   border-color: #FFB038;
 }
+.stage {
+  padding: 120px 10% 50px;
+}
+.stage h3 {
+  text-align: center;
+}
+.stage .chart .bar {
+  margin-bottom: 5px;
+  padding: 3px 8px;
+  text-align: right;
+  color: #FFF;
+  background-color: #FFB038;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.stage .chart .bar:hover {
+  padding: 5px 8px;
+  background-color: #ff9c05;
+}

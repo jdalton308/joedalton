@@ -1,0 +1,27 @@
+
+// D3 page
+//-----------------------
+
+.stage {
+    padding: 120px 10% 50px;
+
+    h3 {
+        text-align: center;
+    }
+    .chart {
+        
+        .bar {
+            margin-bottom: 5px;
+            padding: 3px 8px;
+            text-align: right;
+            color: @white;
+            background-color: @orange;
+            .transition();
+
+            &:hover {
+                padding: 5px 8px;
+                background-color: darken(@orange, 10%);
+            }
+        }
+    }
+}
