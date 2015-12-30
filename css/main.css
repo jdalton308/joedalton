@@ -9,28 +9,42 @@ body {
   font-size: 16px;
   font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
 }
+@media (min-width: 768px) {
+  main {
+    padding-top: 107px;
+  }
+}
 h1,
 .h1,
 h2,
 .h2,
 h3,
-.h3 {
+.h3,
+h4,
+.h4 {
   font-family: "ff-tisa-web-pro", Palatino, Georgia, serif;
   font-weight: 400;
-  margin-top: 0;
+  margin: 0;
+  line-height: 1.2em;
+}
+h1 {
+  font-size: 3rem;
 }
 h2 {
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 30px;
 }
 h2.section-header {
+  font-size: 1.2rem;
   position: relative;
   z-index: 0;
 }
 h2.section-header .h2 {
   display: inline-block;
-  padding: 0 0 2px 10px;
+  padding: 3px 0 4px 10px;
+  font-size: 1.5rem;
 }
 h2.section-header .border1,
 h2.section-header .border2 {
@@ -49,8 +63,16 @@ h2.section-header .border2 {
   top: 100%;
   width: 50%;
 }
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
 p {
   margin: 0 0 10px;
+  font-size: 1rem;
+  line-height: 1.3em;
 }
 ul,
 li {
@@ -82,7 +104,7 @@ section {
 .icon-list li {
   float: left;
   width: 50%;
-  min-height: 145px;
+  min-height: 110px;
   margin-bottom: 30px;
   padding: 0 10px;
   text-align: center;
@@ -90,15 +112,34 @@ section {
 .icon-list li .icon {
   display: inline-block;
   width: 70px;
+  height: 70px;
+  background-color: #333;
+  border-radius: 50%;
+  border: 2px solid #333;
 }
-.icon-list li h3 {
+.icon-list li .icon.badge {
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+}
+.icon-list li .icon.number {
+  line-height: 1.1em;
+  color: #FAFAFA;
+}
+.icon-list li h4 {
   margin-bottom: 3px;
   line-height: 1.2em;
 }
 .icon-list li p {
   margin-bottom: 0;
 }
+@media (min-width: 1024px) {
+  .icon-list li {
+    width: 33.333%;
+  }
+}
 button {
+  display: block;
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
@@ -109,13 +150,14 @@ button {
   letter-spacing: 1px;
   background-color: #333;
   color: #FFF;
-  border: 3px solid #FFF;
-  border-radius: 5px;
+  border: 2px solid #FFF;
+  border-radius: 1px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 button:hover {
-  background-color: #999;
+  background-color: #FFF;
+  color: #333;
 }
 .topBar {
   position: fixed;
@@ -131,25 +173,27 @@ button:hover {
   transition: all 0.3s;
 }
 .topBar.open {
-  max-height: 220px;
+  max-height: 170px;
 }
 @media (min-width: 768px) {
   .topBar {
     height: auto;
     text-align: center;
+    max-height: none;
   }
 }
 .topBar h1 {
   display: inline-block;
   margin: 0;
-  padding: 0 40px 5px;
+  padding: 0 30px 5px;
   color: #333;
   font-size: 2.0rem;
+  line-height: 1.7em;
 }
 @media (min-width: 768px) {
   .topBar h1 {
-    margin: 0 0 10px;
     font-size: 3rem;
+    line-height: 1em;
     border-bottom: 1px solid #333;
   }
 }
@@ -245,6 +289,7 @@ button:hover {
 }
 .topBar ul.mainNav li {
   display: inline-block;
+  margin: 0;
   height: 100%;
   border-bottom: 3px solid transparent;
   -webkit-transition: 0.5s all;
@@ -273,7 +318,7 @@ button:hover {
 .section-hero {
   min-height: 100vh;
   padding: 40vh 30px 0;
-  background-size: auto 100vh;
+  background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -287,19 +332,21 @@ button:hover {
 }
 .section-hero .hero-text {
   display: inline-block;
+  max-width: 400px;
   color: #FFF;
 }
 .section-hero .hero-text h1 {
   display: inline-block;
   padding: 0 8px;
   margin: 0;
+  font-size: 1.8rem;
   font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
   background-color: rgba(0, 0, 0, 0.6);
 }
 @media (min-width: 768px) {
   .section-hero {
     min-height: 0;
-    padding: 100px 30px;
+    padding: 120px 50px;
   }
 }
 .section-about .section-header .border2 {
@@ -308,6 +355,7 @@ button:hover {
 .section-work {
   padding-left: 0;
   padding-right: 0;
+  padding-bottom: 5px;
   background-color: #ccc;
 }
 .section-work .section-header .h2 {
@@ -321,8 +369,10 @@ button:hover {
 .section-work .grid-cont .box-frame {
   position: relative;
   width: 100%;
-  height: 120px;
+  height: 130px;
   overflow: hidden;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 .section-work .grid-cont .box-frame.red {
   background-color: #8E2800;
@@ -339,23 +389,56 @@ button:hover {
 .section-work .grid-cont .box-frame .hover-slide {
   position: absolute;
   left: 0;
-  bottom: 100%;
+  bottom: 0;
   height: 100%;
   width: 100%;
-  padding-top: 40px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-.section-work .grid-cont .box-frame .hover-slide h2 {
-  display: inline-block;
-  margin: 0;
+.section-work .grid-cont .box-frame .hover-slide .hover-slide-copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 0 30px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.section-work .grid-cont .box-frame .hover-slide h3 {
+  margin: 0 0 3px;
+  font-size: 1.5rem;
   font-weight: 400;
   color: #FAFAFA;
+  letter-spacing: 1px;
 }
-.section-work .grid-cont .box-frame:hover .hover-slide {
-  bottom: 0;
+.section-work .grid-cont .box-frame .hover-slide .work-type {
+  color: #FAFAFA;
+  text-transform: uppercase;
+  font-family: "brandon-grotesque", Helvetica, Arial, sans-serif;
+  font-size: 1.0rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+  padding: 0 15px 3px;
+}
+.section-work .grid-cont .box-frame .hover-slide .work-note {
+  color: #ccc;
+  font-size: 0.8rem;
+  margin: 5px 0 0;
+}
+.section-work .grid-cont .box-frame .hover-slide a {
+  color: #ccc;
+  text-decoration: underline;
+}
+.section-work .grid-cont .box-frame .hover-slide a:hover {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .section-work .grid-cont .box-frame:hover .hover-slide {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
 }
 .section-contact {
   background-color: #333;
@@ -367,6 +450,8 @@ button:hover {
 }
 .section-contact form {
   width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 .section-contact form label {
   display: block;
@@ -377,13 +462,13 @@ button:hover {
 .section-contact form input[type="text"],
 .section-contact form input[type="email"],
 .section-contact form textarea {
+  display: block;
   width: 100%;
-  max-width: 300px;
   margin: 0;
   padding: 10px 15px 7px;
   font-size: 1rem;
   border: 2px solid transparent;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 .section-contact form input[type="text"]:focus,
 .section-contact form input[type="email"]:focus,

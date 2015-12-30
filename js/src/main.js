@@ -1,8 +1,14 @@
 
-$(function(){
+// TODO:
+// Form validation
+// Form submital
+// Loading work examples
 
-	// When mobile, hide the nav menu on scroll event
-	//------------------------------------------------
+
+// When mobile, hide the nav menu on scroll event
+//------------------------------------------------
+function initMenu() {
+
 	var width = window.innerWidth;
 
 	if (width < 768) {
@@ -37,8 +43,41 @@ $(function(){
 			$(this).toggleClass('open');
 		});
 	}
+}
 
 
-	//----------------------------------------
+// Animate the scroll event within page
+//------------------------------------------------
+function initScroll() {
+	$('a[href^="#"]').on('click', function (e) {
+		e.preventDefault();
+
+		var $target = $(this.hash);
+		console.log('Target:');
+		console.log($target);
+
+	    $('body').stop().animate({
+	        'scrollTop': $target.offset().top - 110
+	    }, 500, 'swing', function () {
+	        //window.location.hash = target;
+	    });
+	});
+}
+
+
+// Load work examples
+//------------------------------------------------
+function initWork() {
+	// Load an overlay
+}
+
+// 
+//----------------------------------------
+
+
+
+$(function(){
+	initMenu();
+	initScroll();
 
 }); // end doc ready
