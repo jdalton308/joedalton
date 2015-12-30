@@ -2,7 +2,6 @@
 // TODO:
 // Form validation
 // Form submital
-// Loading work examples
 
 
 // When mobile, hide the nav menu on scroll event
@@ -68,7 +67,35 @@ function initScroll() {
 // Load work examples
 //------------------------------------------------
 function initWork() {
-	// Load an overlay
+	var $trigger = $('.hover-slide');
+	var $overlay = $('.work-overlay');
+	var $container = $overlay.find('.content');
+	var $close = $overlay.find('.close');
+
+	// On click, load the page template into the overlay, then show the overlay
+	$trigger.click(function(){
+		var $this = $(this);
+		var name = $this.data('name');
+		var url = '/work/' + name + '.html';
+
+		console.log('Looking for '+ name);
+
+		// Load work page into overlay
+		$.ajax({
+			url: url
+		}).then(function(data){
+			// put html into container and show with css
+			$container.html(data);
+			$overlay.addClass('show');
+		});
+	});
+
+	// Event to close overlay
+	$close.click(function(e){
+		e.stopPropagation();
+
+		$overlay.removeClass('show');
+	});
 }
 
 // 
@@ -79,5 +106,5 @@ function initWork() {
 $(function(){
 	initMenu();
 	initScroll();
-
+	initWork();
 }); // end doc ready
