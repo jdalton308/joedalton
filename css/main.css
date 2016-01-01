@@ -515,7 +515,7 @@ button:hover,
   width: 45%;
 }
 .work-overlay .featured-image.two-img img:last-child {
-  float: right;
+  margin-left: 5%;
 }
 .work-overlay .sub-title {
   margin-bottom: 10px;
