@@ -10,7 +10,8 @@ var styleFiles = [
     ];
 var jsFiles = [
 		'bower_components/jquery/dist/jquery.min.js',
-		'js/src/main.js'
+        'js/src/main.js',
+		'js/src/d-three.js'
 	];
 
 
