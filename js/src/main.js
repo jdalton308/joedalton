@@ -78,8 +78,6 @@ function initWork() {
 		var name = $this.data('name');
 		var url = '/work/' + name + '.html';
 
-		console.log('Looking for '+ name);
-
 		// Load work page into overlay
 		$.ajax({
 			url: url
@@ -107,4 +105,4 @@ $(function(){
 	initMenu();
 	initScroll();
 	initWork();
-}); // end doc ready
+});
