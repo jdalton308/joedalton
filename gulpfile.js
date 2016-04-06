@@ -4,6 +4,7 @@ var gutil = require('gulp-util');
 var less = require('gulp-less');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var server = require('gulp-server-livereload');
 
 var styleFiles = [
         'css/less/main.less'
@@ -20,7 +21,8 @@ gulp.task('styles', function() {
     gulp.src(styleFiles)
         .pipe(concat('main.css'))
         .pipe(less())
-        .pipe(gulp.dest('css/'));
+        .pipe(gulp.dest('css/'))
+        .on('error', gutil.log);
 });
 
 gulp.task('scripts', function(){
@@ -30,6 +32,14 @@ gulp.task('scripts', function(){
 		.pipe(gulp.dest('js/'))
 		.on('error', gutil.log);
 });
+
+// gulp.task('webserver', function(){
+//     gulp.src('/')
+//         .pipe(server({
+//             livereload: true
+//         }))
+//         .on('error', gutil.log);
+// });
 
 gulp.task('watch', function(){
     gulp.watch(['css/less/*.less'], ['styles']);
