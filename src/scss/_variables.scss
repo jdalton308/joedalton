@@ -1,0 +1,147 @@
+
+// Variables
+//============================
+
+//// COLORS ////
+//--------------
+$black:		    #000;
+$darkGrey:    #666;
+$grey:		    #999;
+$lightGrey:	  #ccc;
+$offWhite: 		#FAFAFA;
+$white:       #fff;
+
+// Pallate
+$color1: #7fc3ff; //rgba(127, 195, 255, 100)
+$color2: #b2f7ef; //rgba(178, 247, 239, 100)
+$color3: #eff7f6; //rgba(239, 247, 246, 100)
+$color4: #584b53; //rgba(88, 75, 83, 100)
+$color5: #9d5c63; //rgba(157, 92, 99, 100)
+
+// Assignments
+$textColor:     $color4;
+$border-color:  $color4;
+$box-shadow: 0 2px 12px -2px $lightGrey;
+
+
+
+//// TYPOGRAPHY ////
+//------------------
+$header-fonts: 'Josefin Slab', serif;
+$body-fonts: 'Lato', arial, sans-serif;
+
+$base-font-size: 	20px;
+
+
+
+//// BREAKPOINTS ////
+//-------------------
+$mobile:    768px;
+$tablet:    1024px;
+$desktop:   1200px;
+
+
+
+//// OTHER ////
+//-------------
+$curve1: cubic-bezier(.22,.07,.23,.99);
+
+
+
+//// MIXINS ////
+//--------------
+@mixin transition($time: 0.5s, $delay: 0s, $timing: $curve1) {
+  -webkit-transition: all $time $delay $timing;
+  transition: all $time $delay $timing;
+}
+@mixin transform($props) {
+  -ms-transform: $props;
+  -webkit-transform: $props;
+  transform: $props;
+}
+@mixin centerMe() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Animations
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation($name, $duration, $timing: $curve1, $delay: 0s, $iterations: 1, $direction: normal,  $fill-mode: forwards) {
+
+  -webkit-animation: $name $duration $timing $delay $iterations $direction $fill-mode;
+  animation: $name $duration $timing $delay $iterations $direction $fill-mode;
+
+}
+
+
+
+//// KEYFRAMES ////
+//------------------
+
+// Landing Screen
+$arrowOffset: 50px;
+$showTime: 1s;
+$animationStart: -$arrowOffset * 2;
+
+@include keyframes(typeIn) {
+  0% {
+    width: auto;
+    opacity: 0;
+  }
+  100% {
+    width: auto;
+    opacity: 1;
+  }
+}
+@include keyframes(fromBottom) {
+  0% {
+    bottom: -($arrowOffset * 2);
+  }
+  50% {
+    bottom: ($arrowOffset * 1.4);
+  }
+  80% {
+    bottom: ($arrowOffset * 0.8);
+  }
+  100% {
+    bottom: $arrowOffset;
+  }
+}
+@include keyframes(fromRight) {
+  0% {
+    right: -($arrowOffset * 2);
+  }
+  50% {
+    right: ($arrowOffset * 1.4);
+  }
+  80% {
+    right: ($arrowOffset * 0.8);
+  }
+  100% {
+    right: $arrowOffset;
+  }
+}
+@include keyframes(fromLeft) {
+  0% {
+    left: -($arrowOffset * 2);
+  }
+  50% {
+    left: ($arrowOffset * 1.4);
+  }
+  80% {
+    left: ($arrowOffset * 0.8);
+  }
+  100% {
+    left: $arrowOffset;
+  }
+}

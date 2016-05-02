@@ -1,0 +1,192 @@
+.section-landing {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: $color5;
+  text-align: center;
+
+  .logo {
+    position: relative;
+    top: -300px;
+    display: inline-block;
+    margin-top: $arrowOffset;
+    padding: 10px 30px 16px;
+    border: 1px solid $color3;
+    @include transition(0.8s, 0.8s);
+
+    &.show {
+      top: $arrowOffset;
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+      color: $color3;
+    }
+    h2 {
+      padding: 0 20px 8px;
+      margin-bottom: 9px;
+      border-bottom: 1px solid $color3;
+    }
+  }
+  .text-cont {
+    width: 100%;
+    max-width: 500px;
+    @include centerMe();
+    color: $color3;
+    // @include transition(1s);
+    
+    &.start {
+      .start-btn {
+        display: none;
+      }
+    }
+    &.end {
+      top: 60%;
+    }
+
+    h2 {
+      display: none;
+      position: relative;
+      top: 0;
+      margin-bottom: 5px;
+      @include transition(1s);
+      
+      .digit {
+        display: inline-block;
+        opacity: 0;
+        width: 0;
+      }
+
+      &.start {
+        display: block;
+
+        .digit {
+          animation: .3s typeIn ease forwards;
+
+          $baseDelay: 0.1s;
+          $i: 0;
+          @while ($i < 25) {
+            &:nth-child(#{$i}) {
+              animation-delay: $i * $baseDelay;
+            }
+            $i: $i + 1;
+          }
+        }
+      }
+      &.hide {
+        top: 50px;
+        opacity: 0;
+      }
+    }
+
+  }
+  .next-arrow {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    @include transition(0.6s);
+    border: none;
+
+    .next-label {
+      position: absolute;
+      color: $color3;
+    }
+
+    &#about-btn {
+      left: $animationStart;
+      top: 50%;
+      @include transform( translateY(-50%) );
+
+      &:hover {
+        @include transform( translateY(-50%) scale(1.1));
+      }
+      &.show {
+        @include animation(fromLeft, $showTime);
+      }
+
+      .arrow-box {
+        @include transform( rotate(45deg) );
+      }
+      .next-label {
+        left: 30%;
+        top: 50%;
+        @include transform( translateY(-41%) rotate(90deg) );
+      }
+    }
+
+    &#work-btn {
+      bottom: $animationStart;
+      left: 50%;
+      @include transform( translateX(-50%) );
+
+      &:hover {
+        @include transform( translateX(-50%) scale(1.1));
+      }
+      &.show {
+        @include animation(fromBottom, $showTime, $curve1, 0.2s);
+      }
+
+      .arrow-box {
+        @include transform( rotate(-45deg) );
+      }
+      .next-label {
+        left: 50%;
+        top: -59%;
+        @include transform( translateX(-47%) );
+      }
+    }
+
+    &#contact-btn {
+      right: $animationStart;
+      top: 50%;
+      @include transform( translateY(-50%) );
+
+      &:hover {
+        @include transform( translateY(-50%) scale(1.1));
+      }
+      &.show {
+        @include animation(fromRight, $showTime, $curve1, 0.4s);
+      }
+
+      .arrow-box {
+        @include transform( rotate(-135deg) );
+      }
+      .next-label {
+        right: 0;
+        top: 50%;
+        @include transform( translateY(-50%) rotate(-90deg) );
+      }
+    }
+
+    .arrow-box {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      @include transform( translateY(-50%) rotate(45deg) );
+    }
+    .line {
+      position: absolute;
+      display: inline-block;
+      background-color: $color3;
+      box-shadow: -5px 5px 5px $darkGrey;
+      
+      &.x-line {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 1px;
+      }
+      &.y-line {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 1px;
+      }
+    }
+  }
+}
