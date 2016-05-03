@@ -3,6 +3,7 @@
   top: 100%;
   background-color: $color4;
   color: $color3;
+  overflow: hidden;
 
   &.focus {
     top: 0;
@@ -45,7 +46,8 @@
     h4 {
       margin: 0;
     }
-    h4 {
+    h4,
+    h3 {
       display: inline-block;
       padding: 0 20px 4px;
       margin-bottom: 3px;
@@ -56,6 +58,22 @@
       &:hover { 
         background-color: $color2;
       }
+    }
+  }
+
+  .work-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 50px 30px;
+    @include transition(1s, 0s, $curve3);
+    background-color: $color3;
+
+    &.show {
+      top: 0;
     }
   }
 }
