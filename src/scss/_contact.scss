@@ -1,0 +1,47 @@
+#section-contact {
+  left: 100%;
+  top: 0;
+  background-color: $color3;
+  color: $color4;
+
+  &.focus {
+    left: 0;
+  }
+
+  .back-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $color4;
+    @include transition(0.5s);
+    cursor: pointer;
+
+    h3 {
+      margin: 0;
+      color: $color3;
+      @include transform(rotate(90deg));
+    }
+
+    @media (min-width: $mobile) {
+      &:hover {
+        background-color: darken($color4, 10%);
+      }
+    }
+  }
+
+  .section-body {
+    padding-left: 80px;
+
+    .contact-items {
+      width: 100%;
+      max-width: 800px;
+      @include centerMe();
+
+      .item {
+        display: inline-block;
+        padding: 15px;
+      }
+    }
+  }
+}

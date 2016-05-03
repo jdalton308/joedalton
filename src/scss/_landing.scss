@@ -1,4 +1,4 @@
-.section-landing {
+#section-landing {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -13,7 +13,7 @@
     margin-top: $arrowOffset;
     padding: 10px 30px 16px;
     border: 1px solid $color3;
-    @include transition(0.8s, 0.8s);
+    @include transition(1s, 1s, $curve3);
 
     &.show {
       top: $arrowOffset;
@@ -30,6 +30,8 @@
       border-bottom: 1px solid $color3;
     }
   }
+
+
   .text-cont {
     width: 100%;
     max-width: 500px;
@@ -82,6 +84,8 @@
     }
 
   }
+
+
   .next-arrow {
     position: absolute;
     display: inline-block;

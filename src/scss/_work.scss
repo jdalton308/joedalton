@@ -1,0 +1,35 @@
+#section-work {
+  left: 0;
+  top: 100%;
+  background-color: $color4;
+  color: $color3;
+
+  &.focus {
+    top: 0;
+  }
+
+  .back-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color3;
+    @include transition(0.5s);
+    cursor: pointer;
+
+    h3 {
+      margin: 0;
+      color: $color4;
+    }
+
+    @media (min-width: $mobile) {
+      &:hover {
+        background-color: $color1;
+      }
+    }
+  }
+
+  .section-body {
+    padding-top: 80px;
+  }
+}
