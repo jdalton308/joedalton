@@ -106,7 +106,7 @@ body {
   .side-section .back-bar {
     padding: 20px; }
   .side-section .section-body {
-    padding: 30px 20px;
+    padding: 30px 0;
     min-height: 100vh; }
   .side-section header {
     display: block;
@@ -653,9 +653,28 @@ button,
       color: #584b53; }
     @media (min-width: 768px) {
       #section-work .back-bar:hover {
-        background-color: #7fc3ff; } }
+        background-color: #ccc; } }
   #section-work .section-body {
     padding-top: 80px; }
+  #section-work .work-item {
+    padding: 30px;
+    background-color: #eff7f6;
+    color: #584b53;
+    margin-bottom: 2px;
+    -webkit-transition: all 0.5s 0s cubic-bezier(0.22, 0.07, 0.23, 0.99);
+    transition: all 0.5s 0s cubic-bezier(0.22, 0.07, 0.23, 0.99);
+    cursor: pointer; }
+    #section-work .work-item h2,
+    #section-work .work-item h4 {
+      margin: 0; }
+    #section-work .work-item h4 {
+      display: inline-block;
+      padding: 0 20px 4px;
+      margin-bottom: 3px;
+      border-bottom: 1px solid #584b53; }
+    @media (min-width: 768px) {
+      #section-work .work-item:hover {
+        background-color: #b2f7ef; } }
 
 #section-contact {
   left: 100%;

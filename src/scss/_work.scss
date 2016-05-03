@@ -24,12 +24,38 @@
 
     @media (min-width: $mobile) {
       &:hover {
-        background-color: $color1;
+        background-color: $lightGrey;
       }
     }
   }
 
   .section-body {
     padding-top: 80px;
+  }
+
+  .work-item {
+    padding: 30px;
+    background-color: $color3;
+    color: $color4;
+    margin-bottom: 2px;
+    @include transition(0.5s);
+    cursor: pointer;
+
+    h2,
+    h4 {
+      margin: 0;
+    }
+    h4 {
+      display: inline-block;
+      padding: 0 20px 4px;
+      margin-bottom: 3px;
+      border-bottom: 1px solid $color4;
+    }
+
+    @media (min-width: $mobile) {
+      &:hover { 
+        background-color: $color2;
+      }
+    }
   }
 }

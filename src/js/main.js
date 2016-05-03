@@ -1,6 +1,7 @@
 $(function(){
 
   // Home screen
+  //----------------
   var Landing = (function(){
 
     var $body = $('body');
@@ -82,7 +83,28 @@ $(function(){
   Landing.init();
 
 
+  // Work Section
+  //----------------
+  var Work = (function(){
+    var $section = $('#section-work');
+    var $workItems = $section.find('.work-item');
+
+    function init() {
+      $workItems.click(function(){
+        // get 
+      });
+    }
+
+    return {
+      init: init
+    };
+  })();
+
+  Work.init();
+
+
   // Back Bars
+  //----------------
   $('.back-bar').click(function(){
     $(this).closest('.side-section').removeClass('focus');
   });
