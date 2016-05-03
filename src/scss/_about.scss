@@ -31,6 +31,8 @@
   }
 
   .section-body {
-    padding-right: 80px;
+    max-width: $container;
+    margin: 0 auto;
+    
   }
 }
