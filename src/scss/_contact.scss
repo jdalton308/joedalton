@@ -39,8 +39,26 @@
       @include centerMe();
 
       .item {
+        position: relative;
         display: inline-block;
+        height: 70px;
+        width: 70px;
+        margin: 50px;
         padding: 15px;
+        background-color: $color4;
+        color: $color3;
+        border-radius: 50%;
+
+        &:before {
+          @include centerMe();
+          font-size: 1.5rem;
+        }
+
+        @media (min-width: $mobile) {
+          &:hover {
+            background-color: $color1;
+          }
+        }
       }
     }
   }

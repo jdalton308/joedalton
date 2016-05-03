@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @-webkit-keyframes typeIn {
   0% {
     width: auto;
@@ -74,49 +75,6 @@
   100% {
     left: 50px; } }
 
-* {
-  box-sizing: border-box; }
-
-:focus {
-  outline: none; }
-
-html,
-body {
-  padding: 0;
-  margin: 0; }
-
-html {
-  font-family: "Lato", arial, sans-serif;
-  font-size: 20px;
-  color: #584b53; }
-
-body {
-  position: relative;
-  text-align: center;
-  background-color: #eff7f6;
-  overflow: hidden; }
-
-.side-section {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  overflow-y: auto;
-  -webkit-transition: all 0.8s 0s cubic-bezier(0.97, 0.05, 0.7, 0.96);
-  transition: all 0.8s 0s cubic-bezier(0.97, 0.05, 0.7, 0.96); }
-  .side-section .back-bar {
-    padding: 20px; }
-  .side-section .section-body {
-    padding: 30px 0;
-    min-height: 100vh; }
-  .side-section header {
-    display: block;
-    max-width: 600px;
-    margin: 0 auto 100px;
-    padding: 0 20px 20px;
-    border-bottom: 1px solid #eff7f6; }
-    .side-section header h1 {
-      margin: 0; }
-
 h1,
 h2,
 h3,
@@ -159,6 +117,98 @@ a {
   transition: all 0.5s 0s cubic-bezier(0.22, 0.07, 0.23, 0.99); }
   a:visited {
     color: #584b53; }
+
+@font-face {
+  font-family: 'joe-icons';
+  src: url("/fonts/joe-icons.ttf?748ojo") format("truetype"), url("/fonts/joe-icons.woff?748ojo") format("woff"), url("/fonts/joe-icons.svg?748ojo#joe-icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'joe-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-phone:before {
+  content: ""; }
+
+.icon-octocat:before {
+  content: ""; }
+
+.icon-html:before {
+  content: ""; }
+
+.icon-css:before {
+  content: ""; }
+
+.icon-paper-plane:before {
+  content: ""; }
+
+.icon-instagram:before {
+  content: ""; }
+
+.icon-twitter:before {
+  content: ""; }
+
+.icon-linkedin2:before {
+  content: ""; }
+
+.icon-git:before {
+  content: ""; }
+
+.icon-codepen:before {
+  content: ""; }
+
+* {
+  box-sizing: border-box; }
+
+:focus {
+  outline: none; }
+
+html,
+body {
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-family: "Lato", arial, sans-serif;
+  font-size: 20px;
+  color: #584b53; }
+
+body {
+  position: relative;
+  text-align: center;
+  background-color: #eff7f6;
+  overflow: hidden; }
+
+.side-section {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-transition: all 0.8s 0s cubic-bezier(0.97, 0.05, 0.7, 0.96);
+  transition: all 0.8s 0s cubic-bezier(0.97, 0.05, 0.7, 0.96); }
+  .side-section .back-bar {
+    padding: 20px; }
+  .side-section .section-body {
+    padding: 30px 0;
+    min-height: 100vh; }
+  .side-section header {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto 100px;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid #eff7f6; }
+    .side-section header h1 {
+      margin: 0; }
 
 button,
 .button {
@@ -726,5 +776,21 @@ button,
       left: 50%;
       transform: translate(-50%, -50%); }
       #section-contact .section-body .contact-items .item {
+        position: relative;
         display: inline-block;
-        padding: 15px; }
+        height: 70px;
+        width: 70px;
+        margin: 50px;
+        padding: 15px;
+        background-color: #584b53;
+        color: #eff7f6;
+        border-radius: 50%; }
+        #section-contact .section-body .contact-items .item:before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 1.5rem; }
+        @media (min-width: 768px) {
+          #section-contact .section-body .contact-items .item:hover {
+            background-color: #7fc3ff; } }

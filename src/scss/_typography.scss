@@ -1,0 +1,151 @@
+
+// NOTE: Fonts are imported from Google Fonts
+
+// Variables
+//---------------
+$header-fonts: 'Josefin Slab', serif;
+$body-fonts: 'Lato', arial, sans-serif;
+
+$base-font-size:  20px;
+
+
+// Styles
+//---------------
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1em;
+  margin: 0 0 20px;
+  font-family: $header-fonts;
+}
+h1,
+h2 {
+  font-family: $header-fonts;
+  font-weight: 300;
+}
+h3,
+h4 {
+  font-family: $body-fonts;
+  font-weight: 400;
+}
+h1 {
+  font-size: 4rem;
+  
+  span.closer {
+    letter-spacing: -10px;
+  }
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+h4 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+a {
+  color: $textColor;
+  text-decoration: none;
+  @include transition();
+
+  &:visited {
+    color: $textColor;
+  }
+}
+
+// Icons
+//----------------
+$font-path: "/fonts" !default;
+
+$icon-phone: "\f095";
+$icon-octocat: "\f09b";
+$icon-html: "\f13b";
+$icon-css: "\f13c";
+$icon-paper-plane: "\f1d8";
+$icon-instagram: "\e900";
+$icon-twitter: "\e901";
+$icon-linkedin2: "\e902";
+$icon-git: "\e903";
+$icon-codepen: "\e904";
+
+
+@font-face {
+  font-family: 'joe-icons';
+  src:
+    url('#{$font-path}/joe-icons.ttf?748ojo') format('truetype'),
+    url('#{$font-path}/joe-icons.woff?748ojo') format('woff'),
+    url('#{$font-path}/joe-icons.svg?748ojo#joe-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], 
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'joe-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone {
+  &:before {
+    content: $icon-phone;
+  }
+}
+.icon-octocat {
+  &:before {
+    content: $icon-octocat;
+  }
+}
+.icon-html {
+  &:before {
+    content: $icon-html;
+  }
+}
+.icon-css {
+  &:before {
+    content: $icon-css;
+  }
+}
+.icon-paper-plane {
+  &:before {
+    content: $icon-paper-plane;
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram;
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter;
+  }
+}
+.icon-linkedin2 {
+  &:before {
+    content: $icon-linkedin2;
+  }
+}
+.icon-git {
+  &:before {
+    content: $icon-git;
+  }
+}
+.icon-codepen {
+  &:before {
+    content: $icon-codepen;
+  }
+}

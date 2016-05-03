@@ -1,0 +1,78 @@
+@import "variables";
+
+@font-face {
+    font-family: 'joe-icons';
+    src:
+        url('#{$icomoon-font-path}/joe-icons.ttf?748ojo') format('truetype'),
+        url('#{$icomoon-font-path}/joe-icons.woff?748ojo') format('woff'),
+        url('#{$icomoon-font-path}/joe-icons.svg?748ojo#joe-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'joe-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-uniF095 {
+    &:before {
+        content: $icon-uniF095;
+    }
+}
+.icon-uniF09B {
+    &:before {
+        content: $icon-uniF09B;
+    }
+}
+.icon-uniF13B {
+    &:before {
+        content: $icon-uniF13B;
+    }
+}
+.icon-uniF13C {
+    &:before {
+        content: $icon-uniF13C;
+    }
+}
+.icon-uniF1D8 {
+    &:before {
+        content: $icon-uniF1D8;
+    }
+}
+.icon-instagram {
+    &:before {
+        content: $icon-instagram;
+    }
+}
+.icon-twitter {
+    &:before {
+        content: $icon-twitter;
+    }
+}
+.icon-linkedin2 {
+    &:before {
+        content: $icon-linkedin2;
+    }
+}
+.icon-git {
+    &:before {
+        content: $icon-git;
+    }
+}
+.icon-codepen {
+    &:before {
+        content: $icon-codepen;
+    }
+}
+
