@@ -89,12 +89,17 @@ $(function(){
     var $section = $('#section-work');
     var $workItems = $section.find('.work-item');
     var $workCont = $section.find('.work-container');
+    var $workDetails = $workCont.find('.work-item-details');
+    var $closeBtn = $workCont.find('.close-icon');
 
     function getWork( name ) {
       return $.ajax({
         url: '/work/' + name + '.html',
-        type: get
+        type: 'get'
       });
+    }
+    function closeWork() {
+      $workCont.removeClass('show');
     }
 
     function init() {
@@ -102,8 +107,13 @@ $(function(){
         var $this = $(this);
         var name = $this.data('work');
         getWork( name ).then(function(data){
-          $workCont.html(data).addClass('show');
+          $workDetails.html(data);
+          $workCont.addClass('show');
         });
+      });
+
+      $closeBtn.click(function(){
+        closeWork();
       });
     }
 

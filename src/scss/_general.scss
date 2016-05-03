@@ -28,7 +28,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow-y: auto;
-  @include transition(0.8s, 0s, $curve2);
+  @include transition(0.6s, 0s, $curve2);
 
 	.back-bar {
 		padding: 20px;
@@ -51,6 +51,38 @@ body {
 }
 
 
+// Utilities
+.close-icon {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	display: inline-block;
+	height: 45px;
+	width: 45px;
+	@include transition(0.5s);
+	@include transform( rotate(45deg) );
+	cursor: pointer;
+
+	.line {
+		display: inline-block;
+		width: 100%;
+		height: 1px;
+		background-color: $color4;
+		@include centerMe();
+
+		&.line-y {
+			@include transform( translate(-50%, -50%) rotate(90deg) );
+		}
+	}
+
+	@media (min-width: $mobile) {
+		&:hover {
+			@include transform( rotate(-45deg) );
+		}
+	}
+}
+
+
 // Forms
 button,
 .button {
@@ -70,26 +102,26 @@ button,
   transition: color 0.5s, background-color 0.7s;
   border-width: 1px;
   border-style: solid;
-  
+	  
   &:focus {
     outline: none;
   }
   
+	&.brown {
+		border-color: $color4;
+	  color: $color4;
+
+	  &:hover {
+	    background-color: $color4;
+	    color: $color3;
+	  }
+	}
   &.blue {
     border-color: $color1;
     color: $color1;
     
     &:hover {
       background-color: $color1;
-      color: $color3;
-    }
-  }
-  &.brown {
-    border-color: $color4;
-    color: $color4;
-    
-    &:hover {
-      background-color: $color4;
       color: $color3;
     }
   }
