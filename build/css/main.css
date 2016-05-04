@@ -115,7 +115,7 @@ p {
   color: #584b53;
   font-size: 1rem;
   line-height: 1.5em;
-  margin-bottom: 15px; }
+  margin: 0 0 15px; }
 
 a {
   color: #584b53;
@@ -211,7 +211,7 @@ body {
   .side-section header {
     display: block;
     max-width: 600px;
-    margin: 0 auto 100px;
+    margin: 0 auto 50px;
     padding: 0 20px 20px;
     border-bottom: 1px solid #eff7f6; }
     .side-section header h1 {
@@ -719,7 +719,10 @@ button,
       #section-about .back-bar:hover {
         background-color: #3c3439; } }
   #section-about .section-body {
-    padding-right: 80px; }
+    max-width: 800px;
+    margin: 0 auto; }
+    #section-about .section-body .content .service {
+      margin-bottom: 40px; }
 
 #section-work {
   left: 0;
