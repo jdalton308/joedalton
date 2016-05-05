@@ -1,43 +1,33 @@
 #section-about {
   right: 100%;
   top: 0;
-  background-color: $color3;
-  color: $color4;
+  background-color: $secondary-bg;
+  // color: $color4;
 
   &.focus {
     right: 0;
   }
 
-  .back-bar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background-color: $color4;
-    @include transition(0.5s);
-    cursor: pointer;
-
-    h3 {
-      margin: 0;
-      color: $color3;
-      @include transform(rotate(-90deg));
-    }
-
-    @media (min-width: $mobile) {
-      &:hover {
-        background-color: darken($color4, 10%);
-      }
-    }
-  }
-
   .section-body {
-    max-width: $container;
+    max-width: $container-lg;
     margin: 0 auto;
     
     .content {
+      margin-bottom: 70px;
 
+      h2 {
+        margin-bottom: 30px;
+      }
+      h3 {
+        display: inline-block;
+        margin-bottom: 7px;
+        padding: 0 25px 10px 0;
+        line-height: 1.3em;
+        border-bottom: 1px solid $textColor;
+      }
       .service {
         margin-bottom: 40px;
+        text-align: left;
       }
     }
   }

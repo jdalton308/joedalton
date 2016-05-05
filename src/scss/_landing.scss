@@ -3,31 +3,45 @@
   overflow: hidden;
   width: 100%;
   height: 100vh;
-  background-color: $color5;
+  background-color: $main-bg;
   text-align: center;
 
   .logo {
     position: relative;
     top: -300px;
     display: inline-block;
-    margin-top: $arrowOffset;
-    padding: 10px 30px 16px;
-    border: 1px solid $color3;
-    @include transition(1s, 1s, $curve3);
+    padding: 20px 40px 25px;
+    border: 1px solid transparent;
+    // background-color: $textColor;
+    @include transition(1s, 0s, $curve3);
+    cursor: pointer;
 
     &.show {
-      top: $arrowOffset;
+      top: 0;
     }
 
     h2,
     h3 {
       margin: 0;
-      color: $color3;
+      // color: $main-bg;
     }
     h2 {
       padding: 0 20px 8px;
       margin-bottom: 9px;
-      border-bottom: 1px solid $color3;
+      border-bottom: 1px solid $textColor;
+    }
+
+    @media (min-width: $mobile) {
+      margin-top: $arrowOffset;
+      
+      &.show {
+        top: $arrowOffset;
+      }
+      &:hover {
+        @include transform( scale(1.02) );
+
+        border: 1px solid $textColor;
+      }
     }
   }
 
@@ -36,7 +50,7 @@
     width: 100%;
     max-width: 500px;
     @include centerMe();
-    color: $color3;
+    // color: $color3;
     // @include transition(1s);
     
     &.start {
@@ -97,7 +111,31 @@
 
     .next-label {
       position: absolute;
-      color: $color3;
+      color: $textColor;
+      @include transition(0.5s);
+    }
+
+    &.fixed {
+      position: fixed;
+      z-index: 10;
+      width: 70px;
+      height: 70px;
+      padding: 23px;
+      background-color: $textColor;
+      border-radius: 50%;
+      box-shadow: $box-shadow;
+
+      .line {
+        background-color: $primary-accent;
+
+        &.x-line {
+          height: 2px;
+        }
+        &.y-line {
+          width: 2px;
+        }
+
+      }
     }
 
     &#about-btn {
@@ -106,10 +144,19 @@
       @include transform( translateY(-50%) );
 
       &:hover {
-        @include transform( translateY(-50%) scale(1.1));
+        @include transform( translateY(-50%) scale(1.05));
       }
       &.show {
         @include animation(fromLeft, $showTime);
+      }
+      &.fixed {
+        .arrow-box {
+          position: relative;
+          left: 3px;  
+        }
+        .next-label {
+          left: -200px;
+        }
       }
 
       .arrow-box {
@@ -128,10 +175,21 @@
       @include transform( translateX(-50%) );
 
       &:hover {
-        @include transform( translateX(-50%) scale(1.1));
+        @include transform( translateX(-50%) scale(1.05));
       }
       &.show {
         @include animation(fromBottom, $showTime, $curve1, 0.2s);
+      }
+      &.fixed {
+        left: 6%;
+
+        .arrow-box {
+          position: relative;
+          top: -3px;  
+        }
+        .next-label {
+          top: 200px;
+        }
       }
 
       .arrow-box {
@@ -150,10 +208,19 @@
       @include transform( translateY(-50%) );
 
       &:hover {
-        @include transform( translateY(-50%) scale(1.1));
+        @include transform( translateY(-50%) scale(1.05));
       }
       &.show {
         @include animation(fromRight, $showTime, $curve1, 0.4s);
+      }
+      &.fixed {
+        .arrow-box {
+          position: relative;
+          right: 4px;  
+        }
+        .next-label {
+          right: -200px;
+        }
       }
 
       .arrow-box {
@@ -176,8 +243,8 @@
     .line {
       position: absolute;
       display: inline-block;
-      background-color: $color3;
-      box-shadow: -5px 5px 5px $darkGrey;
+      background-color: $textColor;
+      // box-shadow: -5px 5px 5px $grey;
       
       &.x-line {
         bottom: 0;

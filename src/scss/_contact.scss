@@ -1,53 +1,35 @@
 #section-contact {
   left: 100%;
   top: 0;
-  background-color: $color3;
-  color: $color4;
+  background-color: $secondary-bg;
+  // color: $color4;
 
   &.focus {
     left: 0;
   }
 
-  .back-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: $color4;
-    @include transition(0.5s);
-    cursor: pointer;
-
-    h3 {
-      margin: 0;
-      color: $color3;
-      @include transform(rotate(90deg));
-    }
-
-    @media (min-width: $mobile) {
-      &:hover {
-        background-color: darken($color4, 10%);
-      }
-    }
-  }
-
   .section-body {
-    padding-left: 80px;
+
+    header {
+      border-bottom: none;
+    }
 
     .contact-items {
+      display: inline-block;
       width: 100%;
       max-width: 800px;
-      @include centerMe();
 
       .item {
         position: relative;
         display: inline-block;
         height: 70px;
         width: 70px;
-        margin: 50px;
+        margin: 0 30px;
         padding: 15px;
-        background-color: $color4;
-        color: $color3;
+        background-color: $green-light;
+        color: $textColor;
         border-radius: 50%;
+        box-shadow: $box-shadow;
 
         &:before {
           @include centerMe();
@@ -56,10 +38,32 @@
 
         @media (min-width: $mobile) {
           &:hover {
-            background-color: $color1;
+            // background-color: $green-lighter;
+            @include transform( scale(1.03) );
+            box-shadow: 0 2px 34px -3px $black;
+          }
+        }
+      } // end .item
+      .phone-row {
+        margin-bottom: 40px;
+
+        .row-item {
+          display: inline-block;
+          padding: 0 20px;
+
+          p {
+            display: inline-block;
+            vertical-align: top;
+            margin: 20px 0 0;
           }
         }
       }
+      .button-row {
+        .item {
+          margin: 30px;
+        }
+      }
+
     }
   }
 }

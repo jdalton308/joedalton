@@ -1,42 +1,21 @@
 #section-work {
   left: 0;
   top: 100%;
-  background-color: $color4;
-  color: $color3;
+  background-color: $secondary-bg;
+  // color: $color3;
 
   &.focus {
     top: 0;
   }
-
-  .back-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: $color3;
-    @include transition(0.5s);
-    cursor: pointer;
-
-    h3 {
-      margin: 0;
-      color: $color4;
-    }
-
-    @media (min-width: $mobile) {
-      &:hover {
-        background-color: $lightGrey;
-      }
-    }
-  }
-
   .section-body {
     padding-top: 80px;
   }
 
   .work-item {
+    position: relative;
     padding: 30px;
-    background-color: $color3;
-    color: $color4;
+    background-color: $white;
+    color: $grey;
     margin-bottom: 2px;
     @include transition(0.5s);
     cursor: pointer;
@@ -50,37 +29,86 @@
       display: inline-block;
       padding: 0 20px 4px;
       margin-bottom: 3px;
-      border-bottom: 1px solid $color4;
+      border-bottom: 1px solid $grey;
     }
 
     @media (min-width: $mobile) {
       &:hover { 
-        background-color: $color2;
+        // background-color: $green-lightest;
+        z-index: 2;
+        color: $primary-accent;
+        @include transform( scale(1.03) );
+        box-shadow: $box-shadow;
       }
     }
   }
 
   .work-container {
     position: fixed;
+    z-index: 11;
     top: 100%;
     left: 0;
     width: 100%;
     height: 100vh;
     overflow-y: auto;
     @include transition(1s, 0s, $curve3);
-    background-color: $color3;
-    color: $color4;
+    background-color: $offWhite;
+    color: $grey;
 
     &.show {
       top: 0;
     }
+    .close-icon {
+      .line {
+        background-color: $primary-accent;
+      }
+    }
 
     .work-item-details {
       width: 100%;
-      max-width: $container;
-      height: 100%;
+      max-width: $container-lg;
+      min-height: 100%;
       margin: 0 auto;
       padding: 50px 30px;
+
+      h3 {
+        line-height: 1.3em;
+      }
+      a {
+        color: $primary-accent;
+
+        &:hover {
+          color: $grey;
+        }
+
+        &.button {
+          margin: 30px 0 10px;
+          font-size: 1.3rem;
+
+          &:hover {
+            color: $textColor;
+          }
+        }
+      }
+      .featured-image {
+        margin-bottom: 30px;
+
+        img {
+          width: 100%;
+        }
+
+        &.two-img {
+          img {
+            display: inline-block;
+            vertical-align: top;
+            width: 45%;
+
+            &:first-child {
+              margin-right: 30px;
+            }
+          }
+        }
+      }
     }
   }
 }

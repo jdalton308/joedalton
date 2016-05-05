@@ -1,14 +1,51 @@
 $(function(){
 
+  var $body = $('body');
+  var $start = $('.start-btn');
+  var $cont = $start.parents('.text-cont');
+  var $nextBtn = $('.next-arrow');
+  var $logo = $('.logo');
+  var $line1 = $start.siblings('.line-1');
+  var $line2 = $start.siblings('.line-2');
+  var $line3 = $start.siblings('.line-3');
+
   // Home screen
   //----------------
   var Landing = (function(){
 
-    var $body = $('body');
-    var $start = $('.start-btn');
-    var $cont = $start.parents('.text-cont');
-    var $nextBtn = $('.next-arrow');
-    var $logo = $('.logo');
+    function _play() {
+      $cont.addClass('start');
+
+      // show first line of text
+      window.setTimeout(function(){
+        $line1.addClass('start');
+        
+        // wait 2.8s, then show second line of text
+        window.setTimeout(function(){
+          $line2.addClass('start');
+
+          // wait 2s, hide text
+          window.setTimeout(function(){
+            $line1.addClass('hide');
+            $line2.addClass('hide');
+
+            // wait, 1s, show last line, and arrows
+            window.setTimeout(function(){
+              $cont.addClass('end');
+              $line1.hide();
+              $line2.hide();
+              // $line3.addClass('start');
+
+              // wait 0.5s, show logo
+              window.setTimeout(function(){ // stop here /////
+                $logo.addClass('show');
+                $nextBtn.addClass('show');
+              }, 500);
+            }, 1200);
+          }, 3000)
+        }, 2800);
+      }, 1000);
+    }
 
     function init() {
       var beenBefore = (window.sessionStorage.joedalton === 'true');
@@ -21,58 +58,38 @@ $(function(){
 
         // Bind starting animation event
         $start.click(function(){
-          var $this = $(this);
-          var $cont = $start.parents('.text-cont');
-          var $line1 = $this.siblings('.line-1');
-          var $line2 = $this.siblings('.line-2');
-          var $line3 = $this.siblings('.line-3');
-          
-          $cont.addClass('start');
-
-          // show first line of text
-          window.setTimeout(function(){
-            $line1.addClass('start');
-            
-            // wait 2.8s, then show second line of text
-            window.setTimeout(function(){
-              $line2.addClass('start');
-
-              // wait 2s, hide text
-              window.setTimeout(function(){
-                $line1.addClass('hide');
-                $line2.addClass('hide');
-
-                // wait, 1s, show last line, and arrows
-                window.setTimeout(function(){
-                  $cont.addClass('end');
-                  $line1.hide();
-                  $line2.hide();
-                  // $line3.addClass('start');
-
-                  // wait 0.5s, show logo
-                  window.setTimeout(function(){ // stop here /////
-                    $logo.addClass('show');
-                    $nextBtn.addClass('show');
-                  }, 500);
-                }, 1200);
-              }, 3000)
-            }, 2800);
-          }, 1000);
+          _play();
 
           // remember that user was here
           window.sessionStorage.setItem('joedalton', 'true');
         });
       }
 
+
       // Bind nav-arrow events
       $nextBtn.click(function(){
         var $this = $(this);
+        var fixed = $this.hasClass('fixed');
         var target = $this.data('target');
-
         var $targetSection = $('#section-'+ target);
-        $targetSection.addClass('focus');
+
+        $targetSection.toggleClass('focus', !fixed);
+        $this.toggleClass('fixed');
       });
-        
+
+
+      // Click on logo, and replay animation
+      $logo.click(function(){
+        $logo.removeClass('show');
+        $nextBtn.removeClass('show');
+
+        $cont.removeClass('end');
+        $line1.removeClass('hide start').show();
+        $line2.removeClass('hide start').show();
+
+        _play();
+      });
+
     } // end init()
 
     return {
@@ -127,8 +144,8 @@ $(function(){
 
   // Back Bars
   //----------------
-  $('.back-bar').click(function(){
-    $(this).closest('.side-section').removeClass('focus');
-  });
+  // $('.back-bar').click(function(){
+  //   $(this).closest('.side-section').removeClass('focus');
+  // });
 
 });

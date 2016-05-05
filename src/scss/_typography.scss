@@ -51,18 +51,21 @@ h4 {
 }
 
 p {
-  color: $textColor;
   font-size: 1rem;
   line-height: 1.5em;
   margin: 0 0 15px;
 }
 
 a {
-  color: $textColor;
   text-decoration: none;
   @include transition();
+  color: $green-lightest;
+  text-decoration: underline;
 
-  &:visited {
+  // &:visited {
+  //   color: $green-lightest;
+  // }
+  &:hover {
     color: $textColor;
   }
 }

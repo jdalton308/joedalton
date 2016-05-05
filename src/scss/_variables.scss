@@ -5,23 +5,36 @@
 //// COLORS ////
 //--------------
 $black:		    #000;
-$darkGrey:    #666;
-$grey:		    #999;
-$lightGrey:	  #ccc;
+$grey-light:	#ccc;
 $offWhite: 		#FAFAFA;
 $white:       #fff;
 
 // Pallate
-$color1: #7fc3ff; //rgba(127, 195, 255, 100)
-$color2: #b2f7ef; //rgba(178, 247, 239, 100)
-$color3: #eff7f6; //rgba(239, 247, 246, 100)
-$color4: #584b53; //rgba(88, 75, 83, 100)
-$color5: #9d5c63; //rgba(157, 92, 99, 100)
+// $color1: #7fc3ff; //rgba(127, 195, 255, 100)
+// $color2: #b2f7ef; //rgba(178, 247, 239, 100)
+// $color3: #eff7f6; //rgba(239, 247, 246, 100)
+// $color4: #584b53; //rgba(88, 75, 83, 100)
+// $color5: #9d5c63; //rgba(157, 92, 99, 100)
+
+// New Pallate
+$green-darker:  #2B9E9A;
+$green-light:   #54E0DC;
+$green-lighter: #79FFFB;
+$green-lightest: #A0EEEB;
+$blue:          #1662AD;
+$grey:          #5F6D7A;
+$orange:        #9E491B;
+
+$main-bg:           $green-darker;
+$secondary-bg:      $grey;
+$primary-accent:    $orange;
+$secondary-accent:  $blue;
+
 
 // Assignments
-$textColor:     $color4;
-$border-color:  $color4;
-$box-shadow: 0 2px 12px -2px $lightGrey;
+$textColor:     $white;
+$border-color:  $white;
+$box-shadow: 0 2px 34px -6px $black;
 
 
 
@@ -36,6 +49,7 @@ $desktop:   1200px;
 //// LAYOUT ////
 //-------------------
 $container:   800px;
+$container-lg:  1000px;
 
 
 //// OTHER ////
