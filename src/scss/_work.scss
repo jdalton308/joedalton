@@ -9,6 +9,16 @@
   }
   .section-body {
     padding-top: 80px;
+
+    @media (max-width: $mobile - 1) {
+      padding: 40px 0;
+    }
+  }
+
+  @media (min-width: $mobile) {
+    header {
+      display: none;
+    }
   }
 
   .work-item {
