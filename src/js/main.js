@@ -1,6 +1,7 @@
 $(function(){
 
   var $body = $('body');
+  var $window = $(window);
   var $start = $('.start-btn');
   var $cont = $start.parents('.text-cont');
   var $nextBtn = $('.next-arrow');
@@ -8,6 +9,8 @@ $(function(){
   var $line1 = $start.siblings('.line-1');
   var $line2 = $start.siblings('.line-2');
   var $line3 = $start.siblings('.line-3');
+
+  var isMobile = (window.innerWidth < 768);
 
   // Home screen
   //----------------
@@ -69,12 +72,20 @@ $(function(){
       // Bind nav-arrow events
       $nextBtn.click(function(){
         var $this = $(this);
-        var fixed = $this.hasClass('fixed');
         var target = $this.data('target');
         var $targetSection = $('#section-'+ target);
 
-        $targetSection.toggleClass('focus', !fixed);
-        $this.toggleClass('fixed');
+        if (isMobile) {
+          var scrollTarget = $targetSection.offset().top;
+          $body.animate({
+            scrollTop: scrollTarget
+          }, 500);
+        } else {
+          var fixed = $this.hasClass('fixed');
+
+          $targetSection.toggleClass('focus', !fixed);
+          $this.toggleClass('fixed');
+        }
       });
 
 
@@ -89,6 +100,22 @@ $(function(){
 
         _play();
       });
+
+      // If mobile, watch scroll and show, to-top-btn
+      if (isMobile) {
+        $topBtn = $('.to-top-btn');
+
+        $window.scroll(function(){
+          var scrollPos = $window.scrollTop();
+          $topBtn.toggleClass('show', (scrollPos > 700));
+        });
+
+        $topBtn.click(function(){
+          $body.animate({
+            scrollTop: 0
+          }, 500);
+        });
+      }
 
     } // end init()
 

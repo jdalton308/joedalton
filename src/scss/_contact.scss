@@ -47,14 +47,23 @@
       .phone-row {
 
         .row-item {
-          display: inline-block;
           margin-bottom: 40px;
           padding: 0 20px;
 
           p {
+            margin: 10px 0 0;
+          }
+        }
+
+        @media (min-width: $mobile) {
+          .row-item {
             display: inline-block;
-            vertical-align: top;
-            margin: 20px 0 0;
+
+            p {
+              display: inline-block;
+              vertical-align: top;
+              margin-top: 20px;
+            }
           }
         }
       }

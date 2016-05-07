@@ -1,8 +1,7 @@
 #section-work {
   left: 0;
   top: 100%;
-  background-color: $secondary-bg;
-  // color: $color3;
+  background-color: $main-bg;
 
   &.focus {
     top: 0;
@@ -16,6 +15,8 @@
   }
 
   @media (min-width: $mobile) {
+    background-color: $secondary-bg;
+
     header {
       display: none;
     }
