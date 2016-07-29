@@ -57,9 +57,18 @@
     @include centerMe();
     // color: $color3;
     // @include transition(1s);
+
+    .skip-btn {
+      display: block;
+      width: auto;
+      margin: 40px auto;
+    }
     
     &.start {
       .start-btn {
+        display: none;
+      }
+      .skip-btn {
         display: none;
       }
     }

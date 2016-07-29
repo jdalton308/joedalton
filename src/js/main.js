@@ -3,6 +3,7 @@ $(function(){
   var $body = $('body');
   var $window = $(window);
   var $start = $('.start-btn');
+  var $skipBtn = $('.skip-btn');
   var $cont = $start.parents('.text-cont');
   var $nextBtn = $('.next-arrow');
   var $logo = $('.logo');
@@ -50,13 +51,17 @@ $(function(){
       }, 1000);
     }
 
+    function skipIntro() {
+      $cont.addClass('start');
+      $logo.addClass('show');
+      $nextBtn.addClass('show');
+    }
+
     function init() {
       var beenBefore = (window.sessionStorage.joedalton === 'true');
 
       if (beenBefore) {
-        $cont.addClass('start');
-        $logo.addClass('show');
-        $nextBtn.addClass('show');
+        skipIntro();
       } else {
 
         // Bind starting animation event
@@ -86,6 +91,12 @@ $(function(){
           $targetSection.toggleClass('focus', !fixed);
           $this.toggleClass('fixed');
         }
+      });
+
+
+      // Skip Button
+      $skipBtn.click(function(){
+        skipIntro();
       });
 
 

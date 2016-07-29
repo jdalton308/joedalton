@@ -425,7 +425,13 @@ button,
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    #section-landing .text-cont .skip-btn {
+      display: block;
+      width: auto;
+      margin: 40px auto; }
     #section-landing .text-cont.start .start-btn {
+      display: none; }
+    #section-landing .text-cont.start .skip-btn {
       display: none; }
     #section-landing .text-cont.end {
       top: 60%; }
