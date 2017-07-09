@@ -19,7 +19,7 @@
     padding: 20px 40px 25px;
     border: 1px solid transparent;
     @include transition(1s, 0s, $curve3);
-    cursor: pointer;
+    // cursor: pointer;
 
     &.show {
       top: 0;
@@ -42,76 +42,76 @@
       &.show {
         top: $arrowOffset;
       }
-      &:hover {
-        @include transform( scale(1.02) );
+      // &:hover {
+      //   @include transform( scale(1.02) );
 
-        border: 1px solid $textColor;
-      }
+      //   border: 1px solid $textColor;
+      // }
     }
   }
 
 
-  .text-cont {
-    width: 100%;
-    max-width: 500px;
-    @include centerMe();
-    // color: $color3;
-    // @include transition(1s);
+  // .text-cont {
+  //   width: 100%;
+  //   max-width: 500px;
+  //   @include centerMe();
+  //   // color: $color3;
+  //   // @include transition(1s);
 
-    .skip-btn {
-      display: block;
-      width: auto;
-      margin: 40px auto;
-    }
+  //   .skip-btn {
+  //     display: block;
+  //     width: auto;
+  //     margin: 40px auto;
+  //   }
     
-    &.start {
-      .start-btn {
-        display: none;
-      }
-      .skip-btn {
-        display: none;
-      }
-    }
-    &.end {
-      top: 60%;
-    }
+  //   &.start {
+  //     .start-btn {
+  //       display: none;
+  //     }
+  //     .skip-btn {
+  //       display: none;
+  //     }
+  //   }
+  //   &.end {
+  //     top: 60%;
+  //   }
 
-    h2 {
-      display: none;
-      position: relative;
-      top: 0;
-      margin-bottom: 5px;
-      @include transition(1s);
+  //   h2 {
+  //     display: none;
+  //     position: relative;
+  //     top: 0;
+  //     margin-bottom: 5px;
+  //     @include transition(1s);
       
-      .digit {
-        display: inline-block;
-        opacity: 0;
-        width: 0;
-      }
+  //     .digit {
+  //       display: inline-block;
+  //       opacity: 0;
+  //       width: 0;
+  //     }
 
-      &.start {
-        display: block;
+  //     &.start {
+  //       display: block;
 
-        .digit {
-          animation: .3s typeIn ease forwards;
+  //       .digit {
+  //         animation: .3s typeIn ease forwards;
 
-          $baseDelay: 0.1s;
-          $i: 0;
-          @while ($i < 25) {
-            &:nth-child(#{$i}) {
-              animation-delay: $i * $baseDelay;
-            }
-            $i: $i + 1;
-          }
-        }
-      }
-      &.hide {
-        top: 50px;
-        opacity: 0;
-      }
-    }
+  //         $baseDelay: 0.1s;
+  //         $i: 0;
+  //         @while ($i < 25) {
+  //           &:nth-child(#{$i}) {
+  //             animation-delay: $i * $baseDelay;
+  //           }
+  //           $i: $i + 1;
+  //         }
+  //       }
+  //     }
+  //     &.hide {
+  //       top: 50px;
+  //       opacity: 0;
+  //     }
+  //   }
 
-  }
+  // }
 
 
   button.next-arrow {

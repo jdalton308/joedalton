@@ -17,61 +17,61 @@ $(function(){
   //----------------
   var Landing = (function(){
 
-    function _play() {
-      $cont.addClass('start');
+    // function _play() {
+    //   $cont.addClass('start');
 
-      // show first line of text
-      window.setTimeout(function(){
-        $line1.addClass('start');
+    //   // show first line of text
+    //   window.setTimeout(function(){
+    //     $line1.addClass('start');
         
-        // wait 2.8s, then show second line of text
-        window.setTimeout(function(){
-          $line2.addClass('start');
+    //     // wait 2.8s, then show second line of text
+    //     window.setTimeout(function(){
+    //       $line2.addClass('start');
 
-          // wait 2s, hide text
-          window.setTimeout(function(){
-            $line1.addClass('hide');
-            $line2.addClass('hide');
+    //       // wait 2s, hide text
+    //       window.setTimeout(function(){
+    //         $line1.addClass('hide');
+    //         $line2.addClass('hide');
 
-            // wait, 1s, show last line, and arrows
-            window.setTimeout(function(){
-              $cont.addClass('end');
-              $line1.hide();
-              $line2.hide();
-              // $line3.addClass('start');
+    //         // wait, 1s, show last line, and arrows
+    //         window.setTimeout(function(){
+    //           $cont.addClass('end');
+    //           $line1.hide();
+    //           $line2.hide();
+    //           // $line3.addClass('start');
 
-              // wait 0.5s, show logo
-              window.setTimeout(function(){ // stop here /////
-                $logo.addClass('show');
-                $nextBtn.addClass('show');
-              }, 500);
-            }, 1200);
-          }, 3000)
-        }, 2800);
-      }, 1000);
-    }
+    //           // wait 0.5s, show logo
+    //           window.setTimeout(function(){ // stop here /////
+    //             $logo.addClass('show');
+    //             $nextBtn.addClass('show');
+    //           }, 500);
+    //         }, 1200);
+    //       }, 3000)
+    //     }, 2800);
+    //   }, 1000);
+    // }
 
-    function skipIntro() {
-      $cont.addClass('start');
-      $logo.addClass('show');
-      $nextBtn.addClass('show');
-    }
+    // function skipIntro() {
+    //   $cont.addClass('start');
+    //   $logo.addClass('show');
+    //   $nextBtn.addClass('show');
+    // }
 
     function init() {
-      var beenBefore = (window.sessionStorage.joedalton === 'true');
+      // var beenBefore = (window.sessionStorage.joedalton === 'true');
 
-      if (beenBefore) {
-        skipIntro();
-      } else {
+      // if (beenBefore) {
+      //   skipIntro();
+      // } else {
 
-        // Bind starting animation event
-        $start.click(function(){
-          _play();
+      //   // Bind starting animation event
+      //   $start.click(function(){
+      //     _play();
 
-          // remember that user was here
-          window.sessionStorage.setItem('joedalton', 'true');
-        });
-      }
+      //     // remember that user was here
+      //     window.sessionStorage.setItem('joedalton', 'true');
+      //   });
+      // }
 
 
       // Bind nav-arrow events
@@ -95,22 +95,22 @@ $(function(){
 
 
       // Skip Button
-      $skipBtn.click(function(){
-        skipIntro();
-      });
+      // $skipBtn.click(function(){
+      //   skipIntro();
+      // });
 
 
       // Click on logo, and replay animation
-      $logo.click(function(){
-        $logo.removeClass('show');
-        $nextBtn.removeClass('show');
+      // $logo.click(function(){
+      //   $logo.removeClass('show');
+      //   $nextBtn.removeClass('show');
 
-        $cont.removeClass('end');
-        $line1.removeClass('hide start').show();
-        $line2.removeClass('hide start').show();
+      //   $cont.removeClass('end');
+      //   $line1.removeClass('hide start').show();
+      //   $line2.removeClass('hide start').show();
 
-        _play();
-      });
+      //   _play();
+      // });
 
       // If mobile, watch scroll and show, to-top-btn
       if (isMobile) {

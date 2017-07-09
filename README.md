@@ -1,4 +1,6 @@
 
-This is a starting point for most of my web-based projects.  It uses Gulp for a task-manager and Bower for a dependency-manager.
+### Dependencies
+NPM
 
-After downloading, run `npm i`, then `bower install`
+### Organization
+All source JS, HTML, and CSS/SCSS files are in `/src`, however any static files for production are placed directly into the committed `/build` folder.
