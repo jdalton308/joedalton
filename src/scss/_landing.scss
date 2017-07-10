@@ -1,302 +1,302 @@
-#section-landing {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  padding-top: 25vh;
-  background-color: $main-bg;
-  text-align: center;
+// #section-landing {
+//   position: relative;
+//   overflow: hidden;
+//   width: 100%;
+//   height: 100vh;
+//   padding-top: 25vh;
+//   background-color: $main-bg;
+//   text-align: center;
 
-  @media (min-width: $mobile) {
-    padding-top: 0;
-  }
+//   @media (min-width: $mobile) {
+//     padding-top: 0;
+//   }
 
-  .logo {
-    position: relative;
-    top: -300px;
-    display: inline-block;
-    margin-bottom: 15vh;
-    padding: 20px 40px 25px;
-    border: 1px solid transparent;
-    @include transition(1s, 0s, $curve3);
-    // cursor: pointer;
+//   .logo {
+//     position: relative;
+//     top: -300px;
+//     display: inline-block;
+//     margin-bottom: 15vh;
+//     padding: 20px 40px 25px;
+//     border: 1px solid transparent;
+//     @include transition(1s, 0s, $curve3);
+//     // cursor: pointer;
 
-    &.show {
-      top: 0;
-    }
+//     &.show {
+//       top: 0;
+//     }
 
-    h1,
-    h3 {
-      margin: 0;
-    }
-    h1 {
-      padding: 0 20px 8px;
-      margin-bottom: 9px;
-      border-bottom: 1px solid $textColor;
-    }
+//     h1,
+//     h3 {
+//       margin: 0;
+//     }
+//     h1 {
+//       padding: 0 20px 8px;
+//       margin-bottom: 9px;
+//       border-bottom: 1px solid $textColor;
+//     }
 
-    @media (min-width: $mobile) {
-      margin-top: $arrowOffset;
-      margin-bottom: 0;
+//     @media (min-width: $mobile) {
+//       margin-top: $arrowOffset;
+//       margin-bottom: 0;
       
-      &.show {
-        top: $arrowOffset;
-      }
-      // &:hover {
-      //   @include transform( scale(1.02) );
+//       &.show {
+//         top: $arrowOffset;
+//       }
+//       // &:hover {
+//       //   @include transform( scale(1.02) );
 
-      //   border: 1px solid $textColor;
-      // }
-    }
-  }
+//       //   border: 1px solid $textColor;
+//       // }
+//     }
+//   }
 
 
-  // .text-cont {
-  //   width: 100%;
-  //   max-width: 500px;
-  //   @include centerMe();
-  //   // color: $color3;
-  //   // @include transition(1s);
+//   // .text-cont {
+//   //   width: 100%;
+//   //   max-width: 500px;
+//   //   @include centerMe();
+//   //   // color: $color3;
+//   //   // @include transition(1s);
 
-  //   .skip-btn {
-  //     display: block;
-  //     width: auto;
-  //     margin: 40px auto;
-  //   }
+//   //   .skip-btn {
+//   //     display: block;
+//   //     width: auto;
+//   //     margin: 40px auto;
+//   //   }
     
-  //   &.start {
-  //     .start-btn {
-  //       display: none;
-  //     }
-  //     .skip-btn {
-  //       display: none;
-  //     }
-  //   }
-  //   &.end {
-  //     top: 60%;
-  //   }
+//   //   &.start {
+//   //     .start-btn {
+//   //       display: none;
+//   //     }
+//   //     .skip-btn {
+//   //       display: none;
+//   //     }
+//   //   }
+//   //   &.end {
+//   //     top: 60%;
+//   //   }
 
-  //   h2 {
-  //     display: none;
-  //     position: relative;
-  //     top: 0;
-  //     margin-bottom: 5px;
-  //     @include transition(1s);
+//   //   h2 {
+//   //     display: none;
+//   //     position: relative;
+//   //     top: 0;
+//   //     margin-bottom: 5px;
+//   //     @include transition(1s);
       
-  //     .digit {
-  //       display: inline-block;
-  //       opacity: 0;
-  //       width: 0;
-  //     }
+//   //     .digit {
+//   //       display: inline-block;
+//   //       opacity: 0;
+//   //       width: 0;
+//   //     }
 
-  //     &.start {
-  //       display: block;
+//   //     &.start {
+//   //       display: block;
 
-  //       .digit {
-  //         animation: .3s typeIn ease forwards;
+//   //       .digit {
+//   //         animation: .3s typeIn ease forwards;
 
-  //         $baseDelay: 0.1s;
-  //         $i: 0;
-  //         @while ($i < 25) {
-  //           &:nth-child(#{$i}) {
-  //             animation-delay: $i * $baseDelay;
-  //           }
-  //           $i: $i + 1;
-  //         }
-  //       }
-  //     }
-  //     &.hide {
-  //       top: 50px;
-  //       opacity: 0;
-  //     }
-  //   }
+//   //         $baseDelay: 0.1s;
+//   //         $i: 0;
+//   //         @while ($i < 25) {
+//   //           &:nth-child(#{$i}) {
+//   //             animation-delay: $i * $baseDelay;
+//   //           }
+//   //           $i: $i + 1;
+//   //         }
+//   //       }
+//   //     }
+//   //     &.hide {
+//   //       top: 50px;
+//   //       opacity: 0;
+//   //     }
+//   //   }
 
-  // }
+//   // }
 
 
-  button.next-arrow {
-    display: block;
-    width: 100%;
-    margin-bottom: 2px;
-    padding: 16px 20px;
-    background-color: $white;
-    color: $main-bg;
-    border: none;
-    text-align: center;
+//   button.next-arrow {
+//     display: block;
+//     width: 100%;
+//     margin-bottom: 2px;
+//     padding: 16px 20px;
+//     background-color: $white;
+//     color: $main-bg;
+//     border: none;
+//     text-align: center;
 
-    .next-label {
-      margin: 0;
+//     .next-label {
+//       margin: 0;
 
-      @media (min-width: $mobile) {
-        position: absolute;
-        color: $textColor;
-        @include transition(0.5s);
-      }
-    }
+//       @media (min-width: $mobile) {
+//         position: absolute;
+//         color: $textColor;
+//         @include transition(0.5s);
+//       }
+//     }
 
-    @media (min-width: $mobile) {
-      position: absolute;
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      margin: 0;
-      padding: 0;
-      background-color: transparent;
-      @include transition(0.6s);
-      border: none;
+//     @media (min-width: $mobile) {
+//       position: absolute;
+//       display: inline-block;
+//       width: 40px;
+//       height: 40px;
+//       margin: 0;
+//       padding: 0;
+//       background-color: transparent;
+//       @include transition(0.6s);
+//       border: none;
 
-      &.fixed {
-        position: fixed;
-        z-index: 10;
-        width: 70px;
-        height: 70px;
-        padding: 23px;
-        background-color: $textColor;
-        border-radius: 50%;
-        box-shadow: $box-shadow;
+//       &.fixed {
+//         position: fixed;
+//         z-index: 10;
+//         width: 70px;
+//         height: 70px;
+//         padding: 23px;
+//         background-color: $textColor;
+//         border-radius: 50%;
+//         box-shadow: $box-shadow;
 
-        .line {
-          background-color: $primary-accent;
+//         .line {
+//           background-color: $primary-accent;
 
-          &.x-line {
-            height: 2px;
-          }
-          &.y-line {
-            width: 2px;
-          }
+//           &.x-line {
+//             height: 2px;
+//           }
+//           &.y-line {
+//             width: 2px;
+//           }
 
-        }
-      }
+//         }
+//       }
 
-      &#about-btn {
-        left: $animationStart;
-        top: 50%;
-        @include transform( translateY(-50%) );
+//       &#about-btn {
+//         left: $animationStart;
+//         top: 50%;
+//         @include transform( translateY(-50%) );
 
-        &:hover {
-          @include transform( translateY(-50%) scale(1.05));
-        }
-        &.show {
-          @include animation(fromLeft, $showTime);
-        }
-        &.fixed {
-          .arrow-box {
-            position: relative;
-            left: 3px;  
-          }
-          .next-label {
-            left: -200px;
-          }
-        }
+//         &:hover {
+//           @include transform( translateY(-50%) scale(1.05));
+//         }
+//         &.show {
+//           @include animation(fromLeft, $showTime);
+//         }
+//         &.fixed {
+//           .arrow-box {
+//             position: relative;
+//             left: 3px;  
+//           }
+//           .next-label {
+//             left: -200px;
+//           }
+//         }
 
-        .arrow-box {
-          @include transform( rotate(45deg) );
-        }
-        .next-label {
-          left: 30%;
-          top: 50%;
-          @include transform( translateY(-41%) rotate(90deg) );
-        }
-      }
+//         .arrow-box {
+//           @include transform( rotate(45deg) );
+//         }
+//         .next-label {
+//           left: 30%;
+//           top: 50%;
+//           @include transform( translateY(-41%) rotate(90deg) );
+//         }
+//       }
 
-      &#work-btn {
-        bottom: $animationStart;
-        left: 50%;
-        @include transform( translateX(-50%) );
+//       &#work-btn {
+//         bottom: $animationStart;
+//         left: 50%;
+//         @include transform( translateX(-50%) );
 
-        &:hover {
-          @include transform( translateX(-50%) scale(1.05));
-        }
-        &.show {
-          @include animation(fromBottom, $showTime, $curve1, 0.2s);
-        }
-        &.fixed {
-          left: 6%;
+//         &:hover {
+//           @include transform( translateX(-50%) scale(1.05));
+//         }
+//         &.show {
+//           @include animation(fromBottom, $showTime, $curve1, 0.2s);
+//         }
+//         &.fixed {
+//           left: 6%;
 
-          .arrow-box {
-            position: relative;
-            top: -3px;  
-          }
-          .next-label {
-            top: 200px;
-          }
-        }
+//           .arrow-box {
+//             position: relative;
+//             top: -3px;  
+//           }
+//           .next-label {
+//             top: 200px;
+//           }
+//         }
 
-        .arrow-box {
-          @include transform( rotate(-45deg) );
-        }
-        .next-label {
-          left: 50%;
-          top: -59%;
-          @include transform( translateX(-47%) );
-        }
-      }
+//         .arrow-box {
+//           @include transform( rotate(-45deg) );
+//         }
+//         .next-label {
+//           left: 50%;
+//           top: -59%;
+//           @include transform( translateX(-47%) );
+//         }
+//       }
 
-      &#contact-btn {
-        right: $animationStart;
-        top: 50%;
-        @include transform( translateY(-50%) );
+//       &#contact-btn {
+//         right: $animationStart;
+//         top: 50%;
+//         @include transform( translateY(-50%) );
 
-        &:hover {
-          @include transform( translateY(-50%) scale(1.05));
-        }
-        &.show {
-          @include animation(fromRight, $showTime, $curve1, 0.4s);
-        }
-        &.fixed {
-          .arrow-box {
-            position: relative;
-            right: 4px;  
-          }
-          .next-label {
-            right: -200px;
-          }
-        }
+//         &:hover {
+//           @include transform( translateY(-50%) scale(1.05));
+//         }
+//         &.show {
+//           @include animation(fromRight, $showTime, $curve1, 0.4s);
+//         }
+//         &.fixed {
+//           .arrow-box {
+//             position: relative;
+//             right: 4px;  
+//           }
+//           .next-label {
+//             right: -200px;
+//           }
+//         }
 
-        .arrow-box {
-          @include transform( rotate(-135deg) );
-        }
-        .next-label {
-          right: 0;
-          top: 50%;
-          @include transform( translateY(-50%) rotate(-90deg) );
-        }
-      }
-    }
+//         .arrow-box {
+//           @include transform( rotate(-135deg) );
+//         }
+//         .next-label {
+//           right: 0;
+//           top: 50%;
+//           @include transform( translateY(-50%) rotate(-90deg) );
+//         }
+//       }
+//     }
 
-    .arrow-box {
-      display: none;
+//     .arrow-box {
+//       display: none;
 
-      @media (min-width: $mobile) {
-        display: inline-block;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        @include transform( translateY(-50%) rotate(45deg) );
-      }
-    }
-    .line {
-      display: none;
+//       @media (min-width: $mobile) {
+//         display: inline-block;
+//         position: relative;
+//         width: 100%;
+//         height: 100%;
+//         @include transform( translateY(-50%) rotate(45deg) );
+//       }
+//     }
+//     .line {
+//       display: none;
 
-      @media (min-width: $mobile) {
-        position: absolute;
-        display: inline-block;
-        background-color: $textColor;
-        // box-shadow: -5px 5px 5px $grey;
+//       @media (min-width: $mobile) {
+//         position: absolute;
+//         display: inline-block;
+//         background-color: $textColor;
+//         // box-shadow: -5px 5px 5px $grey;
         
-        &.x-line {
-          bottom: 0;
-          right: 0;
-          width: 100%;
-          height: 1px;
-        }
-        &.y-line {
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 1px;
-        }
-      }
-    }
-  } // end .next-arrow
-}
+//         &.x-line {
+//           bottom: 0;
+//           right: 0;
+//           width: 100%;
+//           height: 1px;
+//         }
+//         &.y-line {
+//           top: 0;
+//           left: 0;
+//           height: 100%;
+//           width: 1px;
+//         }
+//       }
+//     }
+//   } // end .next-arrow
+// }

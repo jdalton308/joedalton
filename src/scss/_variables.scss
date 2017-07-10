@@ -5,27 +5,32 @@
 //// COLORS ////
 //--------------
 $black:		    #000;
-$grey-light:	#ccc;
+$grey:        #223322;
+$grey-light:	#8A8A8A;
 $offWhite: 		#FAFAFA;
 $white:       #fff;
 
+// Palette
+$green:       #03DF8A;
+$green-light:   #07F1BF;
+
 // Pallate
-$green-darker:  #2B9E9A;
-$green-light:   #54E0DC;
-$green-lighter: #79FFFB;
-$green-lightest: #A0EEEB;
+// $green-darker:  #2B9E9A;
+// $green-light:   #54E0DC;
+// $green-lighter: #79FFFB;
+// $green-lightest: #A0EEEB;
 $blue:          #1662AD;
-$grey:          #5F6D7A;
+// $grey:          #5F6D7A;
 $orange:        #9E491B;
 
-$main-bg:           $green-darker;
+// $main-bg:           $green-darker;
 $secondary-bg:      $grey;
 $primary-accent:    $orange;
 $secondary-accent:  $blue;
 
 
 // Assignments
-$textColor:     $white;
+$textColor:     $grey;
 $border-color:  $white;
 $box-shadow: 0 2px 34px -6px $black;
 
@@ -42,7 +47,7 @@ $desktop:   1200px;
 //// LAYOUT ////
 //-------------------
 $container:   800px;
-$container-lg:  1000px;
+$container-lg:  1200px;
 
 
 //// OTHER ////

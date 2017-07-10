@@ -3,7 +3,7 @@
 
 // Variables
 //---------------
-$header-fonts: 'Josefin Slab', serif;
+$header-fonts: 'Montserrat', serif;
 $body-fonts: 'Lato', arial, sans-serif;
 
 $base-font-size:  20px;
@@ -16,54 +16,48 @@ h2,
 h3,
 h4 {
   line-height: 1em;
-  margin: 0 0 20px;
-  font-family: $header-fonts;
+  margin: 0;
 }
 h1,
 h2 {
   font-family: $header-fonts;
-  font-weight: 300;
+  font-weight: 900;
 }
 h3,
 h4 {
-  font-family: $body-fonts;
+  font-family: $header-fonts;
   font-weight: 400;
 }
 h1 {
-  font-size: 2rem;
-  
-  span.closer {
-    letter-spacing: -10px;
-  }
+  font-size: 3rem;
 
   @media (min-width: $mobile) {
-    font-size: 4rem;
+    font-size: 7rem;
   }
 }
 h2 {
   font-size: 2rem;
 
   @media (min-width: $mobile) {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
 }
 h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
-  letter-spacing: 4px;
 
-  @media (min-width: $mobile) {
-    font-size: 1rem;
-  }
+  // @media (min-width: $mobile) {
+  //   font-size: 1rem;
+  // }
 }
 h4 {
-  font-size: 1.3rem;
-  line-height: 1.3em;
-  letter-spacing: 1px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: $grey-light;
 
-  @media (min-width: $mobile) {
-    font-size: 1.3rem;
-  }
+  // @media (min-width: $mobile) {
+  //   font-size: 1.3rem;
+  // }
 }
 
 p {
@@ -75,7 +69,7 @@ p {
 a {
   text-decoration: none;
   @include transition();
-  color: $green-lightest;
+  color: $grey-light;
   text-decoration: underline;
 
   // &:visited {
@@ -85,6 +79,8 @@ a {
     color: $textColor;
   }
 }
+
+
 
 // Icons
 //----------------
