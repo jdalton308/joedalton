@@ -27,10 +27,11 @@
   } // end .item
 
   .row-item {
+    display: inline-block;
     position: relative;
 
     &:first-child {
-      margin-right: 16px;
+      margin-bottom: 16px;
     }
     
     .item {
@@ -51,7 +52,10 @@
     }
 
     @media (min-width: $mobile) {
-      display: inline-block;
+      &:first-child {
+        margin-bottom: 0;
+        margin-right: 16px;
+      }
 
       p {
         display: inline-block;

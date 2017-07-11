@@ -3,6 +3,8 @@ $(function(){
   var $body = $('body');
   var $window = $(window);
   var $section = $('.section');
+  var $about = $('#about');
+  var $projects = $('#projects');
   var $toAbout = $('.arrow-button.about');
   var $toProjects = $('.arrow-button.projects');
 
@@ -14,15 +16,30 @@ $(function(){
   //----------------
   var Landing = (function(){
 
+    function scrollNav(target) {
+      $body.animate({
+        scrollTop: target.offset().top
+      }, 400);
+    }
+
     function init() {
 
       // "Nav"
       $toAbout.click(function(){
-        $section.addClass('right');
+        if (isMobile) {
+          console.log('click');
+          scrollNav($about);
+        } else {
+          $section.addClass('right');
+        }
       });
 
       $toProjects.click(function(){
-        $section.removeClass('right');
+        if (isMobile) {
+          scrollNav($projects);
+        } else {
+          $section.removeClass('right');
+        }
       });
 
 
