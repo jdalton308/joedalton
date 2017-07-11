@@ -1,78 +1,75 @@
-// #section-contact {
-//   left: 100%;
-//   top: 0;
-//   background-color: $secondary-bg;
-//   // color: $color4;
 
-//   &.focus {
-//     left: 0;
-//   }
+.contact-items {
+  display: inline-block;
+  width: 100%;
 
-//   .section-body {
+  .item {
+    position: relative;
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    background-color: $white;
+    color: $textColor;
+    border-radius: 50%;
+    @include transition(0.2s);
 
-//     header {
-//       border-bottom: none;
-//     }
+    &:before {
+      @include centerMe();
+      font-size: 1.5rem;
+    }
 
-//     .contact-items {
-//       display: inline-block;
-//       width: 100%;
-//       max-width: 800px;
+    @media (min-width: $mobile) {
+      &:hover {
+        @include transform( scale(1.03) );
+        box-shadow: 0 2px 14px -3px $black;
+      }
+    }
+  } // end .item
 
-//       .item {
-//         position: relative;
-//         display: inline-block;
-//         height: 70px;
-//         width: 70px;
-//         margin: 0 30px;
-//         padding: 15px;
-//         background-color: $green-light;
-//         color: $textColor;
-//         border-radius: 50%;
-//         box-shadow: $box-shadow;
+  .row-item {
+    position: relative;
 
-//         &:before {
-//           @include centerMe();
-//           font-size: 1.5rem;
-//         }
+    &:first-child {
+      margin-right: 16px;
+    }
+    
+    .item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid $green-light;
 
-//         @media (min-width: $mobile) {
-//           &:hover {
-//             // background-color: $green-lighter;
-//             @include transform( scale(1.03) );
-//             box-shadow: 0 2px 34px -3px $black;
-//           }
-//         }
-//       } // end .item
-//       .phone-row {
+      &:hover {
+        border-color: transparent;
+      }
+    }
+    p {
+      margin: 0;
+      padding: 20px 20px 20px 80px;
+      background-color: $white;
+      border-radius: 50px;
+    }
 
-//         .row-item {
-//           margin-bottom: 40px;
-//           padding: 0 20px;
+    @media (min-width: $mobile) {
+      display: inline-block;
 
-//           p {
-//             margin: 10px 0 0;
-//           }
-//         }
+      p {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
 
-//         @media (min-width: $mobile) {
-//           .row-item {
-//             display: inline-block;
+  .button-row {
+    margin-bottom: 24px;
 
-//             p {
-//               display: inline-block;
-//               vertical-align: top;
-//               margin-top: 20px;
-//             }
-//           }
-//         }
-//       }
-//       .button-row {
-//         .item {
-//           margin: 30px;
-//         }
-//       }
+    .item {
+      margin: 0 0 0 12px;
 
-//     }
-//   }
-// }
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+
+}

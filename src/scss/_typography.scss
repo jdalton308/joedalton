@@ -46,6 +46,23 @@ h3 {
   font-size: 1.2rem;
   text-transform: uppercase;
 
+  &.underline {
+    position: relative;
+    margin-bottom: 32px;
+    padding-bottom: 17px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      width: 60px;
+      height: 2px;
+      background-color: $textColor;
+    }
+  }
+
   // @media (min-width: $mobile) {
   //   font-size: 1rem;
   // }

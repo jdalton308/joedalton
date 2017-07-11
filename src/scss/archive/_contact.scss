@@ -1,0 +1,78 @@
+// #section-contact {
+//   left: 100%;
+//   top: 0;
+//   background-color: $secondary-bg;
+//   // color: $color4;
+
+//   &.focus {
+//     left: 0;
+//   }
+
+//   .section-body {
+
+//     header {
+//       border-bottom: none;
+//     }
+
+//     .contact-items {
+//       display: inline-block;
+//       width: 100%;
+//       max-width: 800px;
+
+//       .item {
+//         position: relative;
+//         display: inline-block;
+//         height: 70px;
+//         width: 70px;
+//         margin: 0 30px;
+//         padding: 15px;
+//         background-color: $green-light;
+//         color: $textColor;
+//         border-radius: 50%;
+//         box-shadow: $box-shadow;
+
+//         &:before {
+//           @include centerMe();
+//           font-size: 1.5rem;
+//         }
+
+//         @media (min-width: $mobile) {
+//           &:hover {
+//             // background-color: $green-lighter;
+//             @include transform( scale(1.03) );
+//             box-shadow: 0 2px 34px -3px $black;
+//           }
+//         }
+//       } // end .item
+//       .phone-row {
+
+//         .row-item {
+//           margin-bottom: 40px;
+//           padding: 0 20px;
+
+//           p {
+//             margin: 10px 0 0;
+//           }
+//         }
+
+//         @media (min-width: $mobile) {
+//           .row-item {
+//             display: inline-block;
+
+//             p {
+//               display: inline-block;
+//               vertical-align: top;
+//               margin-top: 20px;
+//             }
+//           }
+//         }
+//       }
+//       .button-row {
+//         .item {
+//           margin: 30px;
+//         }
+//       }
+
+//     }
+//   }
+// }
