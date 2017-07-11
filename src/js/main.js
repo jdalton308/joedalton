@@ -5,13 +5,6 @@ $(function(){
   var $section = $('.section');
   var $toAbout = $('.arrow-button.about');
   var $toProjects = $('.arrow-button.projects');
-  // var $skipBtn = $('.skip-btn');
-  // var $cont = $start.parents('.text-cont');
-  // var $nextBtn = $('.next-arrow');
-  // var $logo = $('.logo');
-  // var $line1 = $start.siblings('.line-1');
-  // var $line2 = $start.siblings('.line-2');
-  // var $line3 = $start.siblings('.line-3');
 
   var isMobile = (window.innerWidth < 768);
 
