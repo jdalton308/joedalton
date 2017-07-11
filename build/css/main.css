@@ -309,7 +309,8 @@ body {
       line-height: 0.8em;
       margin-bottom: 62px; }
     .section .name-column nav {
-      position: relative; }
+      position: relative;
+      margin-bottom: 62px; }
       .section .name-column nav:after {
         content: '';
         display: block;
@@ -328,8 +329,6 @@ body {
           .section .name-column nav .arrow-button.about {
             float: right;
             right: 0; } }
-    .section .name-column .arrow-button {
-      margin-bottom: 62px; }
     @media (min-width: 768px) {
       .section .name-column {
         display: inline-block;
@@ -440,6 +439,7 @@ button,
         button.arrow-button.left img,
         .button.arrow-button.left img {
           margin-right: auto;
+          margin-left: 0;
           -ms-transform: rotate(180deg);
           -webkit-transform: rotate(180deg);
           transform: rotate(180deg); } }

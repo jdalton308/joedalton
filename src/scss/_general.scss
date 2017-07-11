@@ -153,6 +153,7 @@ body {
     
     nav {
       position: relative;
+      margin-bottom: 62px;
 
       &:after {
         content: '';
@@ -181,10 +182,6 @@ body {
           }
         }
       }
-    }
-
-    .arrow-button {
-      margin-bottom: 62px;
     }
 
     @media (min-width: $mobile) {
@@ -355,6 +352,7 @@ button,
         
         img {
           margin-right: auto;
+          margin-left: 0;
           @include transform( rotate(180deg) );
         }
       }
