@@ -8,8 +8,8 @@
 	outline: none;
 }
 ::selection {
-  background-color: $green-light;
-  color: $textColor;
+  background-color: $orange;
+  color: $offWhite;
 }
 
 html,
@@ -31,6 +31,61 @@ body {
   @media (min-width: $mobile) {
     height: 100vh;
     overflow: hidden;
+  }
+
+  .background-bar {
+    position: absolute;
+    z-index: 0;
+    bottom: 15%;
+    left: -20%;
+    width: 150%;
+    background-color: $green;
+    pointer-events: none;
+    @include transition(1s);
+
+    &.thin {
+      height: 60px;
+      transform: rotate(56deg);
+    }
+    &.thick {
+      height: 110px;
+      transform: rotate(160deg);
+    }
+  }
+
+  &.right {
+    .background-bar {
+      left: -40%;
+    }
+
+    .section {
+      left: -50%;
+
+      .portfolio-column {
+        opacity: 0;
+      }
+      .name-column {
+        // text-align: left;
+
+        nav {
+          .arrow-button {
+            transition-delay: 1s, 0s;
+
+            &.projects {
+              float: left;
+              left: 0;
+            }
+            &.about {
+              float: right;
+              right: -120px;
+            }
+          }
+        }
+      }
+      .about-column {
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -63,35 +118,6 @@ body {
     left: 0;
     width: 100%;
     @include transition(1.1s);
-  }
-
-  &.right {
-    left: -50%;
-
-    .portfolio-column {
-      opacity: 0;
-    }
-    .name-column {
-      // text-align: left;
-
-      nav {
-        .arrow-button {
-          transition-delay: 1s, 0s;
-
-          &.projects {
-            float: left;
-            left: 0;
-          }
-          &.about {
-            float: right;
-            right: -120px;
-          }
-        }
-      }
-    }
-    .about-column {
-      opacity: 1;
-    }
   }
 
   .portfolio-column {
@@ -273,7 +299,7 @@ body {
   z-index: 2;
   display: inline-block;
   top: 10px;
-  left: -100px;
+  right: -100px;
   padding: 17px;
   background-color: $white;
   border-radius: 50%;
@@ -281,14 +307,14 @@ body {
   @include transition();
 
   &.show {
-    left: 10px;
+    right: 10px;
   }
 
   .arrow-box {
     width: 25px;
     height: 25px;
-    border-left: 2px solid $textColor;
-    border-top: 2px solid $textColor;
+    border-left: 2px solid $green;
+    border-top: 2px solid $green;
     @include transform( translateY(6px) rotate(45deg) );
   }
 

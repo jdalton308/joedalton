@@ -30,7 +30,7 @@ $(function(){
           console.log('click');
           scrollNav($about);
         } else {
-          $section.addClass('right');
+          $body.addClass('right');
         }
       });
 
@@ -38,7 +38,7 @@ $(function(){
         if (isMobile) {
           scrollNav($projects);
         } else {
-          $section.removeClass('right');
+          $body.removeClass('right');
         }
       });
 
