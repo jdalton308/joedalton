@@ -1,0 +1,107 @@
+
+.portfolio-column {
+  flex: 0 0 100%;
+  order: 2;
+  padding: 50px 0;
+
+  @media (min-width: $mobile) {
+    display: inline-block;
+    width: 50%;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 130px 20px 0;
+    transition: opacity 0.5s;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  h3 {
+    text-align: left;
+  }
+}
+
+
+.portfolio-item {
+  display: block;
+  margin-bottom: 24px;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: $white;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  @include transition(0.3s);
+
+  @media (min-width: $mobile) {
+    &:hover {
+      @include transform( scale(1.01) );
+      box-shadow: 0 2px 14px -3px $black;
+    }
+  }
+
+  h2 {
+    color: $textColor;
+  }
+  
+  .close-icon {
+    top: -60px;
+  }
+  .content {
+    max-height: 0;
+    padding-top: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  &.focused-item {
+    position: fixed;
+    cursor: default;
+    margin: 0;
+    box-shadow: 0 2px 14px -3px $black;
+    transition: height 0.4s, top 0.4s, width 0.4s 0.35s, box-shadow 0.3s 0.4s;
+
+    &:hover {
+      transform: none;
+      box-shadow: 0 0 200px 200px rgba(0,0,0,0.8);
+    }
+
+    &.show {
+      .close-icon {
+        top: 10px;
+        transition-delay: 1s;
+
+        &:hover {
+          transition-delay: 0s;
+        }
+      }
+      .content {
+        max-height: none;
+        overflow-y: auto;
+        opacity: 1;
+        padding-top: 40px;
+        transition: max-height 0.1s 0.4s, padding 0.1s 0.4s, opacity 0.4s 0.7s;
+      }
+    }
+
+    &.collapse {
+      transition: width 0.4s, box-shadow 0.4s, height 0.4s 0.4s, top 0.4s 0.4s;
+
+      .close-icon {
+        top: -60px;
+        transition-delay: 0s;
+      }
+      .content {
+        max-height: 0;
+        overflow-y: hidden;
+        opacity: 0;
+        padding-top: 0;
+        transition: opacity 0.3s, max-height 0.1s 0.3s, padding 0.1s 0.3s;
+      }
+    }
+  }
+
+}
