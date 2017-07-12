@@ -110,10 +110,10 @@ var projects = [
 			'The game was built with the AngularJS (1.x) framework.  Interesting pieces included how the JavaScript determined the day, then would populate the language throughout the game accordingly, and working with a third-party API for the coupons.  I think we could have done some more animations and made the game a little more visually fun, but it was short time-frame, was well recieved, everyone was happy the way it turned out.'
 		],
 		images: [
-			'/img/work/riddle/desktop1.png',
-			'/img/work/riddle/desktop2.png',
-			'/img/work/riddle/mobile1.png',
-			'/img/work/riddle/mobile2.png',
+			'/img/work/riddle/desktop1.PNG',
+			'/img/work/riddle/desktop2.PNG',
+			'/img/work/riddle/mobile1.PNG',
+			'/img/work/riddle/mobile2.PNG',
 		],
 	},
 	{
