@@ -1,5 +1,6 @@
 
 var $ = require('jquery');
+var ProjectList = require('./project-list');
 
 
 
@@ -7,7 +8,7 @@ var $ = require('jquery');
 //----------------
 
 var $body = $('body');
-var $projectItems = $('.portfolio-item');
+var $projectList = $('#projects');
 
 var isMobile = (window.innerWidth < 768);
 
@@ -91,6 +92,8 @@ function collapseItem($el, $targetEl) {
 
 
 function bindEvents() {
+  var $projectItems = $('.portfolio-item');
+
   $projectItems.click(function(e){
     e.stopPropagation();
     focusItem($(this));
@@ -98,7 +101,36 @@ function bindEvents() {
 }
 
 
+function buildProjects() {
+  var $projects = ProjectList.projects.map(function(project){
+    var $newItem = $(ProjectList.itemTemplate);
+    $newItem.find('.subtitle').text(project.subtitle);
+    $newItem.find('.project-title').text(project.title);
+
+    var $features = $newItem.find('.feature-list');
+    project.features.forEach(function(feature){
+      $features.append('<p>'+ feature +'</p>');
+    });
+
+    var $about = $newItem.find('.about-list');
+    project.about.forEach(function(paragraph){
+      $about.append('<p>'+ paragraph +'</p>')
+    });
+
+    var $images = $newItem.find('.image-content');
+    project.images.forEach(function(url){
+      $images.append('<img src="'+ url +'" />');
+    });
+
+    return $newItem;
+  });
+
+  $projectList.append($projects);
+}
+
+
 function init() {
+  buildProjects();
   bindEvents();
 }
 
