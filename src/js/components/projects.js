@@ -106,6 +106,7 @@ function buildProjects() {
     var $newItem = $(ProjectList.itemTemplate);
     $newItem.find('.subtitle').text(project.subtitle);
     $newItem.find('.project-title').text(project.title);
+    $newItem.find('.arrow-button').attr('href', project.url);
 
     var $features = $newItem.find('.feature-list');
     project.features.forEach(function(feature){
@@ -118,9 +119,13 @@ function buildProjects() {
     });
 
     var $images = $newItem.find('.image-content');
-    project.images.forEach(function(url){
-      $images.append('<img src="'+ url +'" />');
-    });
+    if (project.images.length) {
+      project.images.forEach(function(url){
+        $images.append('<img src="'+ url +'" />');
+      });
+    } else {
+      $images.append('<p class="no-image-message">Images coming soon</p>')
+    }
 
     return $newItem;
   });

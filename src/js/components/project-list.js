@@ -9,6 +9,7 @@ var itemTemplate =
     '</div>' +
     '<div class="content">' +
       '<div class="copy-content">' +
+    		'<a class="button arrow-button" target="_blank" href="">Visit<img src="/img/arrow.svg" /></a>' +
         '<h4 class="underline">Features</h4>' +
         '<div class="feature-list">' +
         '</div>' +
@@ -26,6 +27,7 @@ var projects = [
 	{
 		title: 'TastyMade',
 		subtitle: 'Chipotle',
+		url: '//www.tastymade.com',
 		features: [
 			'GreenSock Animation Library',
 			'Google Maps Styling',
@@ -41,6 +43,7 @@ var projects = [
 	{
 		title: 'Team Page App',
 		subtitle: 'Sketchup',
+		url: '//icebreaker.joedalton.io',
 		features: [
 			'GreenSock Animation Library',
 			'SVG',
@@ -58,6 +61,7 @@ var projects = [
 	{
 		title: 'Techron',
 		subtitle: 'Chevron',
+		url: '//www.techron.com',
 		features: [
 			'CSS Animation',
 			'Social Share API',
@@ -74,6 +78,7 @@ var projects = [
 	{
 		title: 'Guac Hunter',
 		subtitle: 'Chipotle',
+		url: '//guac-hunter.joedalton.io',
 		features: [
 			'Highly Interactive',
 			'Progressive Web App',
@@ -93,6 +98,7 @@ var projects = [
 	{
 		title: 'Riddle-a-Day',
 		subtitle: 'ShopHouse Kitchen',
+		url: '//shophouseriddle.joedalton.io',
 		features: [
 			'Angular.js (1.x)',
 			'3rd Party API',
@@ -113,6 +119,7 @@ var projects = [
 	{
 		title: 'Pizzeria Locale',
 		subtitle: 'Chipotle',
+		url: '//www.pizzerialocale.com',
 		features: [
 			'Full Website',
 			'Parallax Scroll Animation',
@@ -130,6 +137,7 @@ var projects = [
 	{
 		title: 'Care Portal',
 		subtitle: 'Medtronic',
+		url: '//care-portal.joedalton.io',
 		features: [
 			'Angular.js (1.x)',
 			'High-Fidelity Prototype',
@@ -150,6 +158,7 @@ var projects = [
 	{
 		title: 'Athlinks.com',
 		subtitle: 'Athlinks',
+		url: '//www.athlinks.com',
 		features: [
 			'React.js',
 			'Large Team Project',
@@ -164,6 +173,7 @@ var projects = [
 	{
 		title: 'Yall.co',
 		subtitle: 'Yall Collective',
+		url: '//www.yall.co',
 		features: [
 			'Typography',
 			'Wordpress',
@@ -180,6 +190,7 @@ var projects = [
 	{
 		title: 'Trip Trump',
 		subtitle: 'Personal Project',
+		url: '//trip-trump.joedalton.io',
 		features: [
 			'CSS Animation',
 			'Mobile Device Interaction',
@@ -198,6 +209,7 @@ var projects = [
 	{
 		title: 'Joe + Van',
 		subtitle: 'Personal Project',
+		url: '//www.joeplusvan.com',
 		features: [
 			'Node.js',
 			'AWS',

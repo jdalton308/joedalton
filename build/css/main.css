@@ -12,7 +12,8 @@ h2,
 h3,
 button,
 .button,
-h4 {
+h4,
+.portfolio-item .content .copy-content .arrow-button {
   line-height: 1em;
   margin: 0; }
 
@@ -23,7 +24,8 @@ h2 {
 
 h3, button,
 .button,
-h4 {
+h4,
+.portfolio-item .content .copy-content .arrow-button {
   font-family: "Montserrat", serif;
   font-weight: 400; }
 
@@ -59,15 +61,15 @@ h3, button,
       height: 2px;
       background-color: #223322; }
 
-h4 {
+h4, .portfolio-item .content .copy-content .arrow-button {
   font-size: 0.8rem;
   text-transform: uppercase;
   color: #8A8A8A; }
-  h4.underline {
+  h4.underline, .portfolio-item .content .copy-content .underline.arrow-button {
     position: relative;
     margin-bottom: 16px;
     padding-bottom: 12px; }
-    h4.underline:after {
+    h4.underline:after, .portfolio-item .content .copy-content .underline.arrow-button:after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -280,7 +282,7 @@ body {
       text-align: center; }
     .section .about-column .service {
       margin-bottom: 20px; }
-      .section .about-column .service h4 {
+      .section .about-column .service h4, .section .about-column .service .portfolio-item .content .copy-content .arrow-button, .portfolio-item .content .copy-content .section .about-column .service .arrow-button {
         margin-bottom: 4px; }
     @media (min-width: 768px) {
       .section .about-column {
@@ -535,6 +537,13 @@ button,
     .portfolio-item .content .copy-content {
       text-align: left;
       margin-bottom: 60px; }
+      .portfolio-item .content .copy-content .arrow-button {
+        margin-bottom: 44px; }
+        .portfolio-item .content .copy-content .arrow-button img {
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 0 0 4px;
+          height: 14px; }
       .portfolio-item .content .copy-content .feature-list {
         margin-bottom: 60px; }
     .portfolio-item .content .image-content img {
@@ -543,6 +552,11 @@ button,
       margin-bottom: 24px;
       border-radius: 3px;
       box-shadow: 1px 1px 4px #8A8A8A; }
+    .portfolio-item .content .image-content .no-image-message {
+      height: 200px;
+      padding-top: 77px;
+      background-color: #ddd;
+      color: #8A8A8A; }
     @media (min-width: 768px) {
       .portfolio-item .content {
         display: flex;
