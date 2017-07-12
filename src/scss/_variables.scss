@@ -13,8 +13,8 @@ $white:       #fff;
 // Palette
 $green:       #03DF8A;
 $green-light:   #07F1BF;
-$blue:        #3993DD;
-$purple:      #7D83FF;
+// $blue:        #3993DD;
+// $purple:      #7D83FF;
 $orange:      #FB5012;
 
 
@@ -87,60 +87,8 @@ $curve3: cubic-bezier(.21,.05,.07,.99);
 //// KEYFRAMES ////
 //------------------
 
-// Landing Screen
-$arrowOffset: 50px;
-$showTime: 1s;
-$animationStart: -$arrowOffset * 2;
-
-@include keyframes(typeIn) {
-  0% {
-    width: auto;
-    opacity: 0;
-  }
+@include keyframes(shootingOne) {
   100% {
-    width: auto;
-    opacity: 1;
-  }
-}
-@include keyframes(fromBottom) {
-  0% {
-    bottom: -($arrowOffset * 2);
-  }
-  50% {
-    bottom: ($arrowOffset * 1.4);
-  }
-  80% {
-    bottom: ($arrowOffset * 0.8);
-  }
-  100% {
-    bottom: $arrowOffset;
-  }
-}
-@include keyframes(fromRight) {
-  0% {
-    right: -($arrowOffset * 2);
-  }
-  50% {
-    right: ($arrowOffset * 1.4);
-  }
-  80% {
-    right: ($arrowOffset * 0.8);
-  }
-  100% {
-    right: $arrowOffset;
-  }
-}
-@include keyframes(fromLeft) {
-  0% {
-    left: -($arrowOffset * 2);
-  }
-  50% {
-    left: ($arrowOffset * 1.4);
-  }
-  80% {
-    left: ($arrowOffset * 0.8);
-  }
-  100% {
-    left: $arrowOffset;
+    top: 115%;
   }
 }
