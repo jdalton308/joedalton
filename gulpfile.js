@@ -8,15 +8,15 @@ var htmlMin = require('gulp-htmlmin');
 var server = require('gulp-server-livereload');
 
 var styleFiles = [
-        './src/scss/main.scss'
-    ];
+      './src/scss/main.scss'
+  ];
 var jsFiles = [
 		'node_modules/jquery/dist/jquery.min.js',
 		'./src/js/**/*.js'
 	];
 var htmlFiles = [
 		'./src/html/**/*.html'
-]
+	]
 
 
 gulp.task('styles', function() {

@@ -72,6 +72,23 @@ h4 {
   text-transform: uppercase;
   color: $grey-light;
 
+  &.underline {
+    position: relative;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      width: 30px;
+      height: 2px;
+      background-color: $grey-light;
+    }
+  }
+
   // @media (min-width: $mobile) {
   //   font-size: 1.3rem;
   // }

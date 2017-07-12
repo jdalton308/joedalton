@@ -74,11 +74,11 @@ $(function(){
   //----------------
   var Projects = (function(){
     var $projectItems = $('.portfolio-item');
-    // var sourceCard = null;
-
 
     function focusItem($el) {      
       var windowHeight = window.innerHeight;
+      var windowWidth = window.innerWidth;
+
       var boundingRect = $el[0].getBoundingClientRect();
       var clonedStartStyles = {
         top: boundingRect.top,
@@ -89,7 +89,7 @@ $(function(){
 
       var clonedEndStyles = {
         top: '40px',
-        width: 780,
+        width: (windowWidth < 820) ? (windowWidth - 40) : 780,
         height: (windowHeight - 80),
         boxShadow: '0 0 200px 200px rgba(0,0,0,0.8)',
       };
@@ -106,20 +106,24 @@ $(function(){
 
       // - Bind close events
       bindCloseEvents($clonedCard, $el);
+      $body.addClass('fixed');
     }
 
 
     function bindCloseEvents($el, $sourceCard) {
+      // - Prevent click within card from closing
       $el.click(function(e){
         e.stopPropagation();
       });
 
+      // - X click
       var $closeIcon = $el.find('.close-icon');
       $closeIcon.click(function(e){
         e.stopPropagation();
         collapseItem($el, $sourceCard);
       });
 
+      // - Close when clicked anywhere outside
       $body.click(function(){
         collapseItem($el, $sourceCard);
       });
@@ -140,6 +144,7 @@ $(function(){
 
       window.setTimeout(function(){
         $el.remove();
+        $body.removeClass('fixed');
       }, 800);
     }
 
@@ -163,6 +168,7 @@ $(function(){
   })();
 
   Projects.init();
+
 
 
 });

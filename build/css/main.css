@@ -63,6 +63,19 @@ h4 {
   font-size: 0.8rem;
   text-transform: uppercase;
   color: #8A8A8A; }
+  h4.underline {
+    position: relative;
+    margin-bottom: 16px;
+    padding-bottom: 12px; }
+    h4.underline:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      width: 30px;
+      height: 2px;
+      background-color: #8A8A8A; }
 
 p {
   font-size: 1rem;
@@ -152,27 +165,32 @@ body {
   text-align: center;
   background-color: #07F1BF;
   background: linear-gradient(30deg, #03DF8A, #07F1BF); }
+  body.fixed {
+    overflow: hidden; }
   @media (min-width: 768px) {
     body {
       height: 100vh;
       overflow: hidden; } }
   body .background-bar {
-    display: inline-block;
-    position: absolute;
-    z-index: 0;
-    bottom: 15%;
-    left: -20%;
-    width: 150%;
-    background-color: #03DF8A;
-    pointer-events: none;
-    -webkit-transition: all 1s 0s cubic-bezier(0.22, 0.07, 0.23, 0.99);
-    transition: all 1s 0s cubic-bezier(0.22, 0.07, 0.23, 0.99); }
-    body .background-bar.thin {
-      height: 60px;
-      transform: rotate(56deg); }
-    body .background-bar.thick {
-      height: 110px;
-      transform: rotate(160deg); }
+    display: none; }
+    @media (min-width: 768px) {
+      body .background-bar {
+        display: inline-block;
+        position: absolute;
+        z-index: 0;
+        bottom: 15%;
+        left: -20%;
+        width: 150%;
+        background-color: #03DF8A;
+        pointer-events: none;
+        -webkit-transition: all 1s 0s cubic-bezier(0.22, 0.07, 0.23, 0.99);
+        transition: all 1s 0s cubic-bezier(0.22, 0.07, 0.23, 0.99); }
+        body .background-bar.thin {
+          height: 60px;
+          transform: rotate(56deg); }
+        body .background-bar.thick {
+          height: 110px;
+          transform: rotate(160deg); } }
   body.right .background-bar {
     left: -40%; }
   body.right .section {
@@ -510,8 +528,32 @@ button,
   .portfolio-item .content {
     max-height: 0;
     padding-top: 0;
+    padding-left: 12px;
+    padding-right: 12px;
     overflow: hidden;
     opacity: 0; }
+    .portfolio-item .content .copy-content {
+      text-align: left;
+      margin-bottom: 60px; }
+      .portfolio-item .content .copy-content .feature-list {
+        margin-bottom: 60px; }
+    .portfolio-item .content .image-content img {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 24px;
+      border-radius: 3px;
+      box-shadow: 1px 1px 4px #8A8A8A; }
+    @media (min-width: 768px) {
+      .portfolio-item .content {
+        display: flex;
+        padding-left: 24px;
+        padding-right: 24px; }
+        .portfolio-item .content .copy-content {
+          margin-bottom: 0;
+          flex: 0 0 50%; }
+        .portfolio-item .content .image-content {
+          padding-left: 32px;
+          flex: 0 0 50%; } }
   .portfolio-item.focused-item {
     position: fixed;
     cursor: default;
@@ -521,17 +563,19 @@ button,
     .portfolio-item.focused-item:hover {
       transform: none;
       box-shadow: 0 0 200px 200px rgba(0, 0, 0, 0.8); }
-    .portfolio-item.focused-item.show .close-icon {
-      top: 10px;
-      transition-delay: 1s; }
-      .portfolio-item.focused-item.show .close-icon:hover {
-        transition-delay: 0s; }
-    .portfolio-item.focused-item.show .content {
-      max-height: none;
-      overflow-y: auto;
-      opacity: 1;
-      padding-top: 40px;
-      transition: max-height 0.1s 0.4s, padding 0.1s 0.4s, opacity 0.4s 0.7s; }
+    .portfolio-item.focused-item.show {
+      overflow-y: auto; }
+      .portfolio-item.focused-item.show .close-icon {
+        top: 10px;
+        transition-delay: 1s; }
+        .portfolio-item.focused-item.show .close-icon:hover {
+          transition-delay: 0s; }
+      .portfolio-item.focused-item.show .content {
+        max-height: none;
+        overflow-y: auto;
+        opacity: 1;
+        padding-top: 44px;
+        transition: max-height 0.1s 0.4s, padding 0.1s 0.4s, opacity 0.4s 0.7s; }
     .portfolio-item.focused-item.collapse {
       transition: width 0.4s, box-shadow 0.4s, height 0.4s 0.4s, top 0.4s 0.4s; }
       .portfolio-item.focused-item.collapse .close-icon {

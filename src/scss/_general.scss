@@ -28,29 +28,37 @@ body {
   background-color: $green-light;
   background: linear-gradient(30deg, $green, $green-light);
 
+  &.fixed {
+    overflow: hidden;
+  }
+
   @media (min-width: $mobile) {
     height: 100vh;
     overflow: hidden;
   }
 
   .background-bar {
-    display: inline-block;
-    position: absolute;
-    z-index: 0;
-    bottom: 15%;
-    left: -20%;
-    width: 150%;
-    background-color: $green;
-    pointer-events: none;
-    @include transition(1s);
+    display: none;
 
-    &.thin {
-      height: 60px;
-      transform: rotate(56deg);
-    }
-    &.thick {
-      height: 110px;
-      transform: rotate(160deg);
+    @media (min-width: $mobile) {
+      display: inline-block;
+      position: absolute;
+      z-index: 0;
+      bottom: 15%;
+      left: -20%;
+      width: 150%;
+      background-color: $green;
+      pointer-events: none;
+      @include transition(1s);
+
+      &.thin {
+        height: 60px;
+        transform: rotate(56deg);
+      }
+      &.thick {
+        height: 110px;
+        transform: rotate(160deg);
+      }
     }
   }
 

@@ -53,8 +53,43 @@
   .content {
     max-height: 0;
     padding-top: 0;
+    padding-left: 12px;
+    padding-right: 12px;
     overflow: hidden;
     opacity: 0;
+
+    .copy-content {
+      text-align: left;
+      margin-bottom: 60px;
+
+      .feature-list {
+        margin-bottom: 60px;
+      }
+    }
+    .image-content {
+      img {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 24px;
+        border-radius: 3px;
+        box-shadow: 1px 1px 4px $grey-light;
+      }
+    }
+
+    @media (min-width: $mobile) {
+      display: flex;
+      padding-left: 24px;
+      padding-right: 24px;
+
+      .copy-content {
+        margin-bottom: 0;
+        flex: 0 0 50%;
+      }
+      .image-content {
+        padding-left: 32px;
+        flex: 0 0 50%;
+      }
+    }
   }
 
   &.focused-item {
@@ -70,6 +105,8 @@
     }
 
     &.show {
+      overflow-y: auto;
+
       .close-icon {
         top: 10px;
         transition-delay: 1s;
@@ -82,7 +119,7 @@
         max-height: none;
         overflow-y: auto;
         opacity: 1;
-        padding-top: 40px;
+        padding-top: 44px;
         transition: max-height 0.1s 0.4s, padding 0.1s 0.4s, opacity 0.4s 0.7s;
       }
     }
