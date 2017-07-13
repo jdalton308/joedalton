@@ -44,7 +44,7 @@ function focusItem($el) {
   // - Animate element
   window.setTimeout(function(){
     $clonedCard.addClass('show').css(clonedEndStyles);
-  }, 100);
+  }, 50);
 
   // - Bind close events
   bindCloseEvents($clonedCard, $el);

@@ -38,6 +38,10 @@ var projects = [
 			'The site was designed by Chipotle\'s internal design team, then passed off to me.  The animation of the burger opening, controlled by scrolling, is the main feature of the site, and was the most fun to develop. Getting the animations to be responsive while remaining performant was the largest challenge, but I\'m happy with how it turned out.',
 		],
 		images: [
+			'/img/work/tastymade_desktop.jpg',
+			'/img/work/tastymade_desktop2.jpg',
+			'/img/work/tastymade_desktop3.jpg',
+			'/img/work/tastymade_mobile.jpg',
 		],
 	},
 	{
@@ -56,6 +60,9 @@ var projects = [
 			'In building the webpage, the most difficult element was easily all the scroll behavior.  I was asked to make text blur,  elements to move into position at different speeds, backgrounds to rotate, and to show scroll progress on a nav-bar.  This made it fun to build, we all recognized that the performance suffered by these enhancements.  But, nonetheless, it definitely accomplishes our goal of showing off the personality of the SketchUp team.'
 		],
 		images: [
+			'/img/work/sketchup_desktop1.jpg',
+			'/img/work/sketchup_desktop2.jpg',
+			'/img/work/sketchup_desktop3.jpg',
 		],
 	},
 	{
@@ -73,6 +80,10 @@ var projects = [
 			'There were three challenges with the site: Getting the video experiences to work across all devices; Using the browser\'s geolocation API to direct a button to a specific, regoinal, station-finder URL (which they ended up taking out); And allowing each individual video to be shared to social media, independent from the site.  While this was a simple site to build, these features made it a more fun experience, along with the little animations that they gave me some room to run with.'
 		],
 		images: [
+			'/img/work/techron_desktop1.jpg',
+			'/img/work/techron_desktop2.jpg',
+			'/img/work/techron_desktop3.jpg',
+			'/img/work/techron_mobile1.jpg',
 		],
 	},
 	{
@@ -93,6 +104,9 @@ var projects = [
 			'Overall, the game was a big success, with almost 2 million plays in the first week.'
 		],
 		images: [
+			'/img/work/guac_desktop1.jpg',
+			'/img/work/guac_desktop2.jpg',
+			'/img/work/guac_desktop3.jpg',
 		],
 	},
 	{
@@ -132,6 +146,10 @@ var projects = [
 			'One of my favorite features turned out to be the navigation menu, which takes over the page on desktop and mobile. The designer and I came up with a step-wise way to show the nav and then fade-in the text, which creates a simple but nice experience. Another unique design was their Inspiration page, which had a request to scale proportionately with the window size, rather than use breakpoints. To do this, everything on the page is sized relative to the screen\'s height and width, and I am pretty happy with the outcome.'
 		],
 		images: [
+			'/img/work/pizzeria_desktop1.jpg',
+			'/img/work/pizzeria_desktop2.jpg',
+			'/img/work/pizzeria_desktop3.jpg',
+			'/img/work/pizzeria_desktop4.jpg',
 		],
 	},
 	{
@@ -168,6 +186,8 @@ var projects = [
 			'While this is something I was only marginally involved in, most of the front-end code within the app I have touched.  As a member of the design team at this company, I was mostly responsible for making sure the site and app looked the way the design was intended, but we also created most of the animations and interactions, the loading spinner, and the homepage, with every part built in React.js',
 		],
 		images: [
+			'/img/work/athlinks_desktop1.jpg',
+			'/img/work/athlinks_desktop2.jpg',
 		],
 	},
 	{
@@ -185,6 +205,8 @@ var projects = [
 			'This was a really fun project, and the first Wordpress theme I developed from scratch. Most of the interesting development aspects surrounded giving the writer of the posts the control to create many different layout options.  In the end, my friend and I both are happy with the site.'
 		],
 		images: [
+			'/img/work/yall_desktop1.jpg',
+			'/img/work/yall_desktop2.jpg',
 		],
 	},
 	{
