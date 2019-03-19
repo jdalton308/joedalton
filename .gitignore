@@ -8,3 +8,9 @@ node_modules/
 ### OS-Generated ###
 
 .DS_Store
+
+
+
+### Other ###
+
+dist/
