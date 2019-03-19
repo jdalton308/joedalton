@@ -1,5 +1,4 @@
 
-var $ = require('jquery');
 var ProjectList = require('./project-list');
 
 
