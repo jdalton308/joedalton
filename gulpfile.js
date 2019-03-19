@@ -32,7 +32,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function(){
 	browserify('./src/js/main.js').bundle()
 		.pipe(source('app.js'))
-		.pipe(streamify(uglify()))
+		// .pipe(streamify(uglify()))
 		.pipe(gulp.dest('./build/js/'))
 		.on('error', gutil.log);
 });

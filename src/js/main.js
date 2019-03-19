@@ -4,9 +4,9 @@ var Projects = require('./components/projects.js');
 
 
 
-window.load(function(){
+window.onload = function(){
 
   Landing.init();
   Projects.init();
 
-});
+};

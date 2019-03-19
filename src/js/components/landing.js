@@ -3,7 +3,7 @@
 //----------------
 
 var $body = document.querySelector('body');
-var $window = document.querySelector(window);
+// var $window = document.querySelector(window);
 var $about = document.querySelector('#about');
 var $projects = document.querySelector('#projects');
 var $toAbout = document.querySelector('.arrow-button.about');
