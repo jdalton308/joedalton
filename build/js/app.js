@@ -355,20 +355,23 @@ function focusItem($el) {
   var windowHeight = window.innerHeight;
   var windowWidth = window.innerWidth;
 
-  var boundingRect = $el[0].getBoundingClientRect();
+  var boundingRect = $el.getBoundingClientRect();
   var clonedStartStyles = {
-    top: boundingRect.top,
-    left: boundingRect.left,
-    width: boundingRect.width,
-    height: boundingRect.height,
+    top: boundingRect.top +'px',
+    left: boundingRect.left +'px',
+    width: boundingRect.width +'px',
+    height: boundingRect.height +'px',
   };
 
   var clonedEndStyles = {
     top: '40px',
-    width: (windowWidth < 820) ? (windowWidth - 40) : 780,
-    height: (windowHeight - 80),
+    width: ((windowWidth < 820) ? (windowWidth - 40) : 780) +'px',
+    height: (windowHeight - 80) +'px',
     boxShadow: '0 0 200px 200px rgba(0,0,0,0.8)',
   };
+
+  console.log('Start styles: ', clonedStartStyles);
+  console.log('End styles: ', clonedEndStyles);
 
   var $clonedCard = $el.cloneNode(true);
   $clonedCard.classList.add('focused-item');
@@ -392,7 +395,7 @@ function focusItem($el) {
 
 function bindCloseEvents($el, $sourceCard) {
   // - Prevent click within card from closing
-  $el.click(function(e){
+  $el.addEventListener('click', (e) => {
     e.stopPropagation();
   });
 
@@ -415,10 +418,10 @@ function bindCloseEvents($el, $sourceCard) {
 function collapseItem($el, $targetEl) {
   var targetBounding = $targetEl.getBoundingClientRect();
   var collapseStyle = {
-    top: targetBounding.top,
-    left: targetBounding.left,
-    height: targetBounding.height,
-    width: targetBounding.width,
+    top: targetBounding.top +'px',
+    left: targetBounding.left +'px',
+    height: targetBounding.height +'px',
+    width: targetBounding.width +'px',
     boxShadow: '0 0 5px #000',
   };
 
@@ -428,7 +431,7 @@ function collapseItem($el, $targetEl) {
   window.setTimeout(function(){
     $el.remove();
     $body.classList.remove('fixed');
-  }, 800);
+  }, 750);
 }
 
 //--------
