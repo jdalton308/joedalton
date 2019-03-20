@@ -2,7 +2,7 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
@@ -12,9 +12,9 @@ module.exports = {
     filename: 'app.js',
   },
   mode: 'development',
-  devServer: {
-    contentBase: '/dist',
-  },
+  // devServer: {
+  //   contentBase: '/dist',
+  // },
   module: {
     rules: [
       {
@@ -30,9 +30,9 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-            "style-loader",
-            "css-loader",
-            "sass-loader"
+            process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+            'css-loader',
+            'sass-loader'
         ]
       },
       {
@@ -55,6 +55,10 @@ module.exports = {
     // ]),
     new HtmlWebpackPlugin({
       template: './src/index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css"
     }),
   ],
 }

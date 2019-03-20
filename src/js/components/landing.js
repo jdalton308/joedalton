@@ -73,5 +73,4 @@ function init() {
 }
 
 
-// Landing.init();
-module.exports.init = init;
+export default init;

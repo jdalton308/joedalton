@@ -4,7 +4,7 @@
   "description": "Joe Dalton's portfolio website",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js",
+    "build": "NODE_ENV=production webpack --config ./webpack.config.js",
     "start": "webpack-dev-server --open",
     "serve": "http-server ./dist"
   },
@@ -26,6 +26,7 @@
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",

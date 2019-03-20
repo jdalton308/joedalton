@@ -7,7 +7,7 @@ import '../scss/main.scss';
 
 window.onload = function(){
 
-  Landing.init();
-  Projects.init();
+  Landing();
+  Projects();
 
 };

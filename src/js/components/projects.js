@@ -1,5 +1,6 @@
 
-var ProjectList = require('./project-list');
+import ProjectList from './project-list';
+import ItemTemplate from './item-template';
 
 
 
@@ -117,10 +118,10 @@ function bindEvents() {
 function buildProjects() {
   const docRange = document.createRange();
 
-  var $projects = ProjectList.projects.forEach((project) => {
+  var $projects = ProjectList.forEach((project) => {
 
     // var $newItem = $(ProjectList.itemTemplate);
-    const $newItem = docRange.createContextualFragment(ProjectList.itemTemplate);
+    const $newItem = docRange.createContextualFragment(ItemTemplate);
 
     $newItem.querySelector('.subtitle').textContent = project.subtitle;
     $newItem.querySelector('.project-title').textContent = project.title;
@@ -158,5 +159,4 @@ function init() {
 }
 
 
-
-module.exports.init = init;
+export default init;
