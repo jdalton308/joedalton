@@ -1,7 +1,8 @@
 
-var Landing = require('./components/landing.js');
-var Projects = require('./components/projects.js');
+import Landing from './components/landing.js';
+import Projects from './components/projects.js';
 
+import '../scss/main.scss';
 
 
 window.onload = function(){
