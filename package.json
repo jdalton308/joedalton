@@ -4,8 +4,8 @@
   "description": "Joe Dalton's portfolio website",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack --config ./webpack.config.js",
-    "start": "webpack-dev-server --open",
+    "build": "NODE_ENV=production webpack --mode production",
+    "start": "webpack-dev-server --mode development --open",
     "serve": "http-server ./dist"
   },
   "repository": {

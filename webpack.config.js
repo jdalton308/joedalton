@@ -3,6 +3,7 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 
 module.exports = {
@@ -11,10 +12,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.js',
   },
-  mode: 'development',
-  // devServer: {
-  //   contentBase: '/dist',
-  // },
+  devServer: {
+    contentBase: './dist',
+    hot: true,
+  },
   module: {
     rules: [
       {
@@ -30,9 +31,9 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-            process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-            'css-loader',
-            'sass-loader'
+          process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
         ]
       },
       {
@@ -53,6 +54,7 @@ module.exports = {
     // new CopyWebpackPlugin([
     //   { context: 'node_modules/@kite/typography', from: 'fonts', to: 'assets/fonts' },
     // ]),
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
