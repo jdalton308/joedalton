@@ -36,9 +36,6 @@ function focusItem($el) {
     boxShadow: '0 0 200px 200px rgba(0,0,0,0.8)',
   };
 
-  console.log('Start styles: ', clonedStartStyles);
-  console.log('End styles: ', clonedEndStyles);
-
   var $clonedCard = $el.cloneNode(true);
   $clonedCard.classList.add('focused-item');
   Object.assign($clonedCard.style, clonedStartStyles);
@@ -140,7 +137,7 @@ function buildProjects() {
     var $images = $newItem.querySelector('.image-content');
     if (project.images.length) {
       project.images.forEach(function(url){
-        $images.insertAdjacentHTML('beforeend', '<img src="'+ url +'" />');
+        $images.insertAdjacentHTML('beforeend', '<img src="'+ require(url) +'" />');
       });
     } else {
       $images.insertAdjacentHTML('beforeend', '<p class="no-image-message">Images coming soon</p>')

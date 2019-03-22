@@ -51,9 +51,10 @@ module.exports = {
     ]
   },
   plugins: [
-    // new CopyWebpackPlugin([
-    //   { context: 'node_modules/@kite/typography', from: 'fonts', to: 'assets/fonts' },
-    // ]),
+    new CopyWebpackPlugin([
+      { from: 'src/assets' },
+      { from: 'src/joe-icons/fonts', to: 'fonts' },
+    ]),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
