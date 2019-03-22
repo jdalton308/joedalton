@@ -122,7 +122,16 @@ function buildProjects() {
 
     $newItem.querySelector('.subtitle').textContent = project.subtitle;
     $newItem.querySelector('.project-title').textContent = project.title;
-    $newItem.querySelector('.arrow-button').setAttribute('href', project.url);
+
+    const $linkBtn = $newItem.querySelector('.arrow-button');
+    if (project.url) {
+      $linkBtn.setAttribute('href', project.url);
+    } else {
+      $linkBtn.remove();
+    }
+
+    $newItem.querySelector('.duration').insertAdjacentHTML('beforeend', '<p>'+ project.duration +'</p>');
+    $newItem.querySelector('.date').insertAdjacentHTML('beforeend', '<p>'+ project.date +'</p>');
 
     var $features = $newItem.querySelector('.feature-list');
     project.features.forEach((feature) => {

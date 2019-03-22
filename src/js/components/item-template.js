@@ -10,12 +10,27 @@ const itemTempalte = `
     <div class="content">
       <div class="copy-content">
         <a class="button arrow-button" target="_blank" href="">Visit<img src="/img/arrow.svg" /></a>
-        <h4 class="underline">Features</h4>
-        <div class="feature-list">
+
+        <div class="project-section">
+          <h4 class="underline">Features</h4>
+          <div class="feature-list"></div>
         </div>
-        <h4 class="underline">About</h4>
-        <div class="about-list">
+
+        <div class="project-section">
+          <h4 class="underline">About</h4>
+          <div class="about-list"></div>
         </div>
+
+        <div class="project-section">
+          <h4 class="underline">Duration</h4>
+          <div class="duration"></div>
+        </div>
+
+        <div class="project-section">
+          <h4 class="underline">Date</h4>
+          <div class="date"></div>
+        </div>
+
       </div>
       <div class="image-content">
       </div>
