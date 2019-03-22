@@ -107,10 +107,10 @@ const projects = [
 			'The game was built with the AngularJS (1.x) framework. Interesting pieces included how the JavaScript determined the day, then would populate the language throughout the game accordingly, and working with a third-party API for the coupons. I think we could have done some more animations and made the game a little more visually fun, but it was short time-frame, was well recieved, everyone was happy the way it turned out.'
 		],
 		images: [
-			'/img/work/riddle/desktop1.PNG',
-			'/img/work/riddle/desktop2.PNG',
-			'/img/work/riddle/mobile1.PNG',
-			'/img/work/riddle/mobile2.PNG',
+			'/img/work/riddle/desktop1.jpg',
+			'/img/work/riddle/desktop2.jpg',
+			'/img/work/riddle/mobile1.jpg',
+			'/img/work/riddle/mobile2.jpg',
 		],
 	},
 	{
@@ -152,9 +152,11 @@ const projects = [
 			'Easily the highlight of the project was the animations that overlays the login screen\'s video, which can be seen using the link above. This was done completely with CSS, allowing the copy to be changed anytime. Other fun parts were making almost all the information editable, creating sliders and percentage bars from HTML, and a lot of little animations throughout the app that made it feel a bit more alive.',
 		],
 		images: [
-			'/img/work/care-portal/login1.PNG',
-			'/img/work/care-portal/login2.PNG',
-			'/img/work/care-portal/doctor-patient-editing.PNG',
+			'/img/work/care-portal/login1.jpg',
+			'/img/work/care-portal/login2.jpg',
+			'/img/work/care-portal/doctor-patient-editing.jpg',
+			'/img/work/care-portal/doctor-patients.PNG',
+			'/img/work/care-portal/doctor-profile.jpg',
 		],
 	},
 	{
