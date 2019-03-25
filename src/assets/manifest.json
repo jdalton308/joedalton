@@ -1,0 +1,21 @@
+{
+    "name": "Joe Dalton Web Development & Design",
+    "short_name": "Joe Dalton",
+    "icons": [
+        {
+            "src": "img/favicon_192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/favicon_512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#07F1BF",
+    "background_color": "#07F1BF"
+}

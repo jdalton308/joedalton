@@ -16,7 +16,7 @@ module.exports = {
   entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: devMode ? '[id].js' : '[id].[hash].js',
+    filename: devMode ? '[name].js' : '[name].[hash].js',
   },
   devServer: {
     contentBase: './dist',
