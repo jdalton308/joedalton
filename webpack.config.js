@@ -8,6 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 const devMode = (process.env.NODE_ENV !== 'production');
 
@@ -69,8 +70,13 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(),
+    new ManifestPlugin({
+      fileName: 'cache-manifest.json',
+      // Add files for service worker to pre-fetch here:
+      filter: ({path}) => (path.includes('main.') || path.includes('fonts/') || path === 'index.html'),
+    }),
     new CopyWebpackPlugin([
-      { from: 'src/assets' },
+      { from: 'src/assets', ignore: ['.DS_Store'] },
       { from: 'src/joe-icons/fonts', to: 'fonts' },
     ]),
     new HtmlWebpackPlugin({
