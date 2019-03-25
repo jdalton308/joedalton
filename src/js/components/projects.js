@@ -146,7 +146,7 @@ function buildProjects() {
     var $images = $newItem.querySelector('.image-content');
     if (project.images.length) {
       project.images.forEach(function(url){
-        $images.insertAdjacentHTML('beforeend', '<img src="'+ url +'" />');
+        $images.insertAdjacentHTML('beforeend', '<img src="'+ url +'" alt="screenshot of project" />');
       });
     } else {
       $images.insertAdjacentHTML('beforeend', '<p class="no-image-message">Images coming soon</p>')
