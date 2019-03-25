@@ -40,6 +40,10 @@ function focusItem($el) {
   $clonedCard.classList.add('focused-item');
   Object.assign($clonedCard.style, clonedStartStyles);
 
+  // - Show images
+  const $clonedCardImages = $clonedCard.querySelectorAll('.image-content img');
+  $clonedCardImages.forEach(showImage);
+
   // - Add element
   $body.appendChild($clonedCard);
 
@@ -52,6 +56,12 @@ function focusItem($el) {
   // - Bind close events
   bindCloseEvents($clonedCard, $el);
   $body.classList.add('fixed');
+}
+
+//--------
+
+function showImage($el) {
+  $el.setAttribute('src', $el.dataset.src);
 }
 
 //--------
@@ -99,27 +109,15 @@ function collapseItem($el, $targetEl) {
 
 //--------
 
-function bindEvents() {
-  var $projectItems = document.querySelectorAll('.portfolio-item');
-
-  $projectItems.forEach(($el) => {
-    $el.addEventListener('click', (e) => {
-      e.stopPropagation();
-      focusItem($el);
-    });
-  });
-}
-
-//--------
-
 function buildProjects() {
   const docRange = document.createRange();
 
   var $projects = ProjectList.forEach((project) => {
 
-    // var $newItem = $(ProjectList.itemTemplate);
+    // Copy template
     const $newItem = docRange.createContextualFragment(ItemTemplate);
 
+    // Set copy in template...
     $newItem.querySelector('.subtitle').textContent = project.subtitle;
     $newItem.querySelector('.project-title').textContent = project.title;
 
@@ -143,10 +141,11 @@ function buildProjects() {
       $about.insertAdjacentHTML('beforeend', '<p>'+ paragraph +'</p>')
     });
 
+    // Add images, but set-up for lazy-loading
     var $images = $newItem.querySelector('.image-content');
     if (project.images.length) {
       project.images.forEach(function(url){
-        $images.insertAdjacentHTML('beforeend', '<img src="'+ url +'" alt="screenshot of project" />');
+        $images.insertAdjacentHTML('beforeend', '<img data-src="'+ url +'" alt="screenshot of project" />');
       });
     } else {
       $images.insertAdjacentHTML('beforeend', '<p class="no-image-message">Images coming soon</p>')
@@ -155,6 +154,19 @@ function buildProjects() {
     $projectList.appendChild($newItem);
   });
 
+}
+
+//--------
+
+function bindEvents() {
+  var $projectItems = document.querySelectorAll('.portfolio-item');
+
+  $projectItems.forEach(($el) => {
+    $el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      focusItem($el);
+    });
+  });
 }
 
 //--------
