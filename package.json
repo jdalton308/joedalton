@@ -6,7 +6,8 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --mode=production",
     "start": "webpack-dev-server --mode=development --open",
-    "serve": "http-server ./dist"
+    "serve": "http-server ./dist",
+    "deploy": "npm run build && firebase deploy"
   },
   "repository": {
     "type": "git",
