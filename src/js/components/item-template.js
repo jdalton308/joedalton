@@ -9,7 +9,7 @@ const itemTempalte = `
     </div>
     <div class="content">
       <div class="copy-content">
-        <a class="button arrow-button" target="_blank" href="">Visit<img src="/img/arrow.svg" /></a>
+        <a class="button arrow-button" target="_blank" rel="noopener" href="">Visit<img src="/img/arrow.svg" alt="arrow icon"/></a>
 
         <div class="project-section">
           <h4 class="underline">Features</h4>

@@ -23,4 +23,6 @@ if ('serviceWorker' in navigator) {
     .catch((err) => {
       console.log('error registering service worker: ', err);
     });
+} else {
+  console.log('serviceWorker not found in navigator object', navigator);
 }
