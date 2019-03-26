@@ -1,16 +1,31 @@
 {
-  "hosting": {
-    "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  }
+  "hosting": [
+    {
+      "target": "main",
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "care-portal",
+      "public": "subdomains/care-portal-build"
+    },
+    {
+      "target": "guac-hunter",
+      "public": "subdomains/guac-game/public"
+    },
+    {
+      "target": "shophouse-riddle",
+      "public": "subdomains/riddle"
+    }
+  ]
 }

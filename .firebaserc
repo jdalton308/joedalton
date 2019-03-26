@@ -1,5 +1,23 @@
 {
   "projects": {
     "default": "joe-dalton"
+  },
+  "targets": {
+    "joe-dalton": {
+      "hosting": {
+        "main": [
+          "joe-dalton"
+        ],
+        "care-portal": [
+          "care-portal"
+        ],
+        "guac-hunter": [
+          "guac-hunter"
+        ],
+        "shophouse-riddle": [
+          "shophouse-riddle"
+        ]
+      }
+    }
   }
 }
