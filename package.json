@@ -10,7 +10,7 @@
     "deploy": "npm run build && firebase deploy --only hosting:main",
     "deploy:care-portal": "firebase deploy --only hosting:care-portal",
     "deploy:guac-hunter": "firebase deploy --only hosting:guac-hunter",
-    "deploy:shophouse-riddle": "firebase deploy --only hosting:shophouse-riddle",
+    "deploy:shophouse-riddle": "firebase deploy --only hosting:shophouse-riddle"
   },
   "repository": {
     "type": "git",
